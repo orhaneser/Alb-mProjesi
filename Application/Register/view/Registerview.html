@@ -1,4 +1,4 @@
-<div ng-controller="registerctrl">
+<div ng-controller="registerctrl" ng-model="registerdata">
 <div class="container">
 
         <form class="well form-horizontal"   id="contact_form">
@@ -12,7 +12,7 @@
       <div class="col-md-4 inputGroupContainer">
       <div class="input-group">
       <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-      <input  name="Adı" placeholder="Adı" class="form-control"  type="text">
+      <input  name="Adı" placeholder="Adı" class="form-control" ng-model="registerdata.ad"  type="text">
         </div>
       </div>
     </div>
@@ -23,7 +23,7 @@
         <div class="col-md-4 inputGroupContainer">
         <div class="input-group">
       <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-      <input name="Soyadı" placeholder="Soyadı" class="form-control"  type="text">
+      <input name="Soyadı" placeholder="Soyadı" class="form-control" ng-model="registerdata.soyad"  type="text">
         </div>
       </div>
     </div>
@@ -61,7 +61,7 @@
       <div class="col-md-4 inputGroupContainer">
       <div class="input-group">
             <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-      <input  name="user_name" placeholder="email" class="form-control"  type="email">
+      <input  name="user_name" placeholder="email" class="form-control" ng-model="registerdata.email"  type="email">
         </div>
       </div>
     </div>
@@ -72,7 +72,7 @@
         <div class="col-md-4 inputGroupContainer">
         <div class="input-group">
       <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-      <input name="user_password" placeholder="Parola" class="form-control"  type="password">
+      <input name="user_password" placeholder="Parola" class="form-control" ng-model="registerdata.password"  type="password">
         </div>
       </div>
     </div>
@@ -83,7 +83,7 @@
         <div class="col-md-4 inputGroupContainer">
         <div class="input-group">
       <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-      <input name="confirm_password" placeholder="Parola Tekrarı" class="form-control"  type="password">
+      <input name="confirm_password" placeholder="Parola Tekrarı" class="form-control"  ng-model="registerdata.cpassword"  type="password">
         </div>
       </div>
     </div>
@@ -96,8 +96,8 @@
         <div class="col-md-4 inputGroupContainer">
         <div class="input-group">
             <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
-      <input name="contact_no" placeholder="(05XX)" class="form-control" type="text">
-        </div>
+      <input name="contact_no" placeholder="(05XX)" onkeypress='return event.charCode >= 48 && event.charCode <= 57'  maxlength="11" class="form-control" ng-model="registerdata.phone"type="text">
+    </div>
       </div>
     </div>
     
@@ -106,7 +106,7 @@
     <div class="form-group">
       <label class="col-md-4 control-label"></label>
       <div class="col-md-4"><br>
-        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<button type="submit" class="btn btn-warning" >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Kayıt Ol <span class="glyphicon glyphicon-send"></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</button>
+        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<button type="submit" ng-click="checkRegisterForm()" class="btn btn-warning" >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Kayıt Ol <span class="glyphicon glyphicon-send"></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</button>
       </div>
     </div>
     
