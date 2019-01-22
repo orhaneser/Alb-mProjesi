@@ -7,6 +7,14 @@ aplication.controller("registerctrl", function($scope, $location) {
     cpassword: "",
     phone: ""
   };
+  $scope.yearsarray = [];
+  const year = parseInt(new Date().toLocaleDateString().split(".")[2]);
+  for (let index = year; index >= year - 20; index--) {
+    $scope.yearsarray.push(index);
+  }
+  $scope.selectyear = data => {
+    debugger;
+  };
   $scope.checkRegisterForm = () => {
     if (
       $scope.registerdata.ad.trim() == "" ||
@@ -40,10 +48,10 @@ aplication.controller("registerctrl", function($scope, $location) {
       $scope.registerdata.phone.trim() == ""
     ) {
       Component.showmessage("Uyarı", "Telefon Numrası Geçersiz");
-    }else {
-        //kara liste kontrol
-        //email kontrol
-        //temp kontrol
+    } else {
+      //kara liste kontrol
+      //email kontrol
+      //temp kontrol
     }
   };
 });
