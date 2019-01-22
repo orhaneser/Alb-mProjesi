@@ -41,7 +41,9 @@ aplication.controller("registerctrl", function($scope, $location) {
     ) {
       Component.showmessage("Uyarı", "Telefon Numrası Geçersiz");
     }else {
-
+        //kara liste kontrol
+        //email kontrol
+        //temp kontrol
     }
   };
 });
