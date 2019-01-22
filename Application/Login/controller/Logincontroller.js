@@ -1,3 +1,3 @@
-aplication.controller("loginctrl", function ($scope) {
+aplication.controller("loginctrl", function ($scope,$location) {
     $scope.mesaj="Merhaba Dünya";
   });
