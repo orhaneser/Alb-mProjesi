@@ -12,9 +12,6 @@ aplication.controller("registerctrl", function($scope, $location) {
   for (let index = year; index >= year - 20; index--) {
     $scope.yearsarray.push(index);
   }
-  $scope.selectyear = data => {
-    debugger;
-  };
   $scope.checkRegisterForm = () => {
     if (
       $scope.registerdata.ad.trim() == "" ||
@@ -26,6 +23,8 @@ aplication.controller("registerctrl", function($scope, $location) {
       $scope.registerdata.soyad.trim().length < 3
     ) {
       Component.showmessage("Uyarı", "SoyAd Alanı Geçersiz");
+    } else if ($scope.selected == undefined) {
+      Component.showmessage("Uyarı", "Mezuniyet Yılı Geçersiz");
     } else if (!Component.validateemail($scope.registerdata.email.trim())) {
       Component.showmessage("Uyarı", "Email Adresi Geçersiz");
     } else if (

@@ -6,7 +6,7 @@
   "scripts": {
     "start": "electron ."
   },
-  "repository": "https://github.com/electron/electron-quick-start",
+  "repository": "https://github.com/YASIINN/Alb-mProjesi.git",
   "keywords": [
     "Electron",
     "quick",
@@ -17,7 +17,7 @@
   "author": "GitHub",
   "license": "CC0-1.0",
   "devDependencies": {
-    "electron": "^4.0.1"
+    "electron": "^4.0.2"
   },
   "dependencies": {
     "alertifyjs": "^1.11.2"
