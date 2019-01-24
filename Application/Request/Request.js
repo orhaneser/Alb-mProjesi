@@ -1,5 +1,5 @@
 var Provider = {
-    AjaxPOST: function (ServiceName, MethodName, json) {
+    AjaxPOST: function (json) {
         var deferred = new Promise(function (resolve, reject) {
             $.ajax({
                 type: "POST",
