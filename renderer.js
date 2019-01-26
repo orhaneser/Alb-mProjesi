@@ -7,13 +7,16 @@ aplication.config(function ($routeProvider) {
         }).when("/Register",{
             templateUrl: "./Application/Register/view/Registerview.html",
             controller:"registerctrl"
+        }).when("/RegisterCheck",{
+            templateUrl: "./Application/RegisterCheck/view/RegisterCheckview.html",
+            controller:"registercheckctrl"
         })
       .otherwise({
-            template: "<h1>None</h1><p>Nothing has been selected</p>"
+            template: "<h1>Sory Not Found</h1>"
         });
 });
 
 aplication.controller("mainctrl", function ($scope) {
-    $scope.test="Merhaba ak";
+    $scope.test="Merhaba";
   });
   

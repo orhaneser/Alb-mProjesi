@@ -1,4 +1,4 @@
-<div ng-controller="registerctrl" ng-model="registerdata">
+<div ng-controller="registerctrl" ng-model="registerdata" ng-init="getplugins()" >
 <div class="container">
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="#!/">Giriş Yap</a></li>
@@ -37,11 +37,8 @@
         <div class="col-md-4 selectContainer">
         <div class="input-group">
             <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
-        <select name="department" class="form-control selectpicker">
-          <option value=""></option>
-          <option>Mühendislik Fakültesi</option>
-          <option>İktisadi ve İdari Bilimler Fakültesi</option>
-        </select>
+            <select ng-model="fselect"  ng-change="getdepartmant(fselect)"      class="form-control selectpicker"  ng-options="x.fname for x in facultylist">
+            </select>
       </div>
     </div>
     </div>
@@ -51,11 +48,8 @@
               <div class="col-md-4 selectContainer">
               <div class="input-group">
                   <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
-              <select name="department" class="form-control selectpicker">
-                <option value=""></option>
-                <option>Bilgisayar Mühendisliği</option>
-                <option>İktisadi ve İdari Bilimler Fakültesi</option>
-              </select>
+                  <select ng-model="dselect"  ng-change=""      class="form-control selectpicker"  ng-options="x.blname for x in deparmentlist">
+                  </select>
             </div>
           </div>
           </div>
@@ -65,12 +59,10 @@
         <div class="col-md-4 selectContainer">
         <div class="input-group">
       <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-        <select name="department" class="form-control selectpicker">
-          <option value=""></option>
-          <option  disabled selected>Ankara</option>
-          <option>İstanbul</option>
-        </select>
-      </div>
+            <select ng-model="cselect"  ng-change=""      class="form-control selectpicker"  ng-options="x.cname for x in citylist">
+            </select>
+
+        </div>
     </div>
     </div>
 
@@ -145,5 +137,4 @@
     </fieldset>
     </form>
     </div>
-        </div>
-    </div>
+  </div>

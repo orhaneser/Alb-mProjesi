@@ -3,7 +3,7 @@ class database
 {
     public $iscon;
     protected $datab;
-    public function __construct($username = "root", $password = "", $host = "localhost", $dbname = "symposiumapp")
+    public function __construct($username = "root", $password = "", $host = "localhost", $dbname = "albumproject")
     {
         $this->iscon = true;
         try {
