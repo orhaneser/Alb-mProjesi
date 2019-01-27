@@ -18,7 +18,7 @@ require_once('../dbclas/pdocls.php');
 class MailService extends database
 {
     public $results=array();
-    function  sendmail($maildata)
+    function  sendmail($maildata){
         $result = false;
         $mail = new PHPMailer(true);
         $mail->isSMTP();
@@ -27,9 +27,9 @@ class MailService extends database
         $mail->SMTPSecure = 'tls';
         $mail->Port = 587;
         $mail->CharSet = 'UTF-8';
-        $subject =  $maildata[$i]['subject'];
-        $messega = $maildata[$i]['messega'];
-        $mail->addAddress($maildata[$i]['mail'], '');
+        $subject =  $maildata[0]['subject'];
+        $messega = $maildata[0]['messega'];
+        $mail->addAddress($maildata[0]['mail'], '');
         $mail->Username = "ysndlklc1234@gmail.com";
         $mail->Password = "4d32adf5";
         $mail->setFrom("ysndlklc1234@gmail.com", '');

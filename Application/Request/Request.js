@@ -3,7 +3,7 @@ var Provider = {
         var deferred = new Promise(function (resolve, reject) {
             $.ajax({
                 type: "POST",
-                url: "/electrotest/Services/ServicesRequests.php",
+                url: "http://localhost/electrotest/Services/ServicesRequests.php",
                 datatype: 'application/json',
                 data: json,
                 success: function (data, status, xhr) {

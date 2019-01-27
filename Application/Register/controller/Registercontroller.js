@@ -18,7 +18,7 @@ aplication.controller("registerctrl", function($scope, $location,$http) {
     $scope.getcity();
   }
   $scope.getcity=()=>{
-    if(localStorage.getItem("city")==null){
+    if(localStorage.getItem("city")==null ||localStorage.getItem("city")=="" ){
       Provider.AjaxPOST({SN:"City",MN:"get",where:"1"}).then(function(res){
       $scope.citylist=[];
       $scope.$apply(()=>{
@@ -34,7 +34,7 @@ aplication.controller("registerctrl", function($scope, $location,$http) {
     }
   }
   $scope.getfaculty=()=>{
-    if(localStorage.getItem("faculty")==null){
+    if(localStorage.getItem("faculty")==null || localStorage.getItem("faculty")=="" ){
     Provider.AjaxPOST({SN:"Faculty",MN:"get",where:"1"}).then(function(res){
       if(res!="None") {
         localStorage.setItem("faculty", JSON.stringify(res))
@@ -69,21 +69,52 @@ aplication.controller("registerctrl", function($scope, $location,$http) {
     return text;
   },
   $scope.addRegister=(name,lastname,phone,mail,faculty,department,pass,city,year)=>{
-      var registerdata=[{
+    Provider.AjaxPOST({SN:"RegisterTemp",MN:"add",
+      registerdata:[{
         uname:name.toUpperCase(),
         ulastname:lastname.toUpperCase(),
         uphone:phone,
         umail:mail,
         ufaculty:faculty,
         udepartment:department,
-        upass:pass,
+        upass:md5(pass),
         rcode:md5($scope.makeid())+"%"+ new Date().toLocaleDateString().split(".")[0] + new Date().toLocaleDateString().split(".")[1] + new Date().toLocaleDateString().split(".")[2],
         ucity:city,
         uyear:year
-
       }]
-    Provider.AjaxPOST({}).then(function (res) {
+    }).then(function (res) {
+          if(res=="Succes"){
+            Provider.AjaxPOST({SN:"RegisterTemp",MN:"get",where:"umail=?",param:[$scope.registerdata.email]}).then(function (res) {
+              debugger
+              if(typeof res =="object"){
+                var host="http://localhost/electrotest/#!/RegisterCheck?"
+                var msgg="<html><body>";
+                msgg+="<b>Kayıt oldugunuz için teşekkürler</b>";
+                msgg+="<br>";
+                msgg+="<b>buraya tıklayarak kaydınızı aktif edebilirsiniz</b>";
+                msgg+="<br>";
+                msgg+=host+res[0].rcode;
+                msgg+="<hr>";
+                msgg+="<br>";
+                msgg+="<b>Tüm Haklar Gizlidir.</b>";
+                msgg+="</body></html>";
+                Provider.AjaxPOST({SN:"MailService",MN:"sendmail",maildata:[{subject:"KAYIT AKTİVİTASYONU",messega:msgg,mail:res[0].umail}]}).then(function (res) {
+                if(res=="Succes"){
 
+                }
+                else{
+                  //mail gitmedi
+                }
+                })
+              }else{
+              //kayıt yok
+              }
+            })
+
+
+          }else{
+            //kayıt eklenemedi
+          }
     })
   }
   $scope.checkRegisterForm = () => {
@@ -131,14 +162,13 @@ aplication.controller("registerctrl", function($scope, $location,$http) {
       Component.showmessage("Uyarı", "Telefon Numrası Geçersiz");
     }
     else {
-      debugger
       Provider.AjaxPOST({SN: "BlockList", MN: "get", where: "email=? OR phone=?", param: [$scope.registerdata.email,$scope.registerdata.phone]}).then(function (res) {
         if(res=="None"){
             Provider.AjaxPOST({SN:"UserMail",MN:"get",where:"mail=?",param:[$scope.registerdata.email]}).then(function (res) {
                 if(res=="None"){
                   Provider.AjaxPOST({SN:"RegisterTemp",MN:"get",where:"umail=?",param:[$scope.registerdata.email]}).then(function (res) {
                         if(res=="None"){
-
+                              $scope.addRegister( $scope.registerdata.ad.toUpperCase(),$scope.registerdata.soyad.toUpperCase(),$scope.registerdata.phone,$scope.registerdata.email,$scope.fselect.fid,$scope.dselect.blid, $scope.registerdata.password,$scope.cselect.cid,$scope.selected);
                         }else{
                           Component.showmessage("Uyarı","Bu Email Adresine Sahip Bir Üyelik Zaten Oluşturuldu Lütfen Email Adresinizi Kontrol Edin")
                         }

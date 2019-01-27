@@ -33,26 +33,28 @@ class RegisterTemp extends  database
         }
         return  $this->result;
     }
-    public function ADD($registerdata)
+    public function add($registerdata)
     {
         for ($i = 0; $i < count($registerdata); $i++) {
             $data = array(
-                "rtname" => $registerdata[$i]['rtname'],
-                "rtlname" => $registerdata[$i]['rtlname'],
-                "rtemail" => $registerdata[$i]['rtemail'],
-                "rtuniinst" => $registerdata[$i]['rtuniinst'],
-                "rtpass" => $registerdata[$i]['rtpass'],
-                "rtlcode" => $registerdata[$i]['rtlcode'],
-                "rauth" => $registerdata[$i]['rauth'],
-                "rphone"=>$registerdata[$i]['rphone'],
+                "uname" => $registerdata[$i]['uname'],
+                "ulastname" => $registerdata[$i]['ulastname'],
+                "uphone" => $registerdata[$i]['uphone'],
+                "umail" => $registerdata[$i]['umail'],
+                "ufaculty" => $registerdata[$i]['ufaculty'],
+                "udepartment" => $registerdata[$i]['udepartment'],
+                "upass" => $registerdata[$i]['upass'],
+                "rcode"=>$registerdata[$i]['rcode'],
+                "ucity"=>$registerdata[$i]['ucity'],
+                "uyear"=>$registerdata[$i]['uyear'],
             );
             if(null !==$this->beginTransaction()){
                 $this->beginTransaction();
             }
-            $addRows = $this->insert('registertemptable', $data);
+            $addRows = $this->insert('registertemp', $data);
         }
         if ($addRows) {
-            $this->result[] = array("status" => "SuccesAdd");
+            $this->result = array("status" => "Succes");
             $this->result;
             $this->DoOrDie(true);
         } else {

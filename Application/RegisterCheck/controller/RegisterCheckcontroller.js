@@ -1,4 +1,6 @@
-aplication.controller("registerctrl", function($scope, $location) {
-   
+aplication.controller("registercheckctrl", function($scope, $location) {
+   $scope.checkRegister=()=>{
+
+   }
   });
   

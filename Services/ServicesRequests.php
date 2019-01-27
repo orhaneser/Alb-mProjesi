@@ -59,6 +59,16 @@ if($SN=="RegisterTemp"){
     $registertemp=new $SN();
     if($MN=="get"){
         $result=  $registertemp->$MN($_POST['where'],(isset($_POST['param']) ? $_POST['param'] : array()));
+    }else if($MN=="add"){
+        $result = $registertemp->$MN($_POST['registerdata']);
+    }
+    echo json_encode($result);
+}
+if($SN=="MailService"){
+    include ("MailService/sendmail.php");
+    $sendmail=new $SN();
+    if($MN=="sendmail"){
+        $result=  $sendmail->$MN($_POST['maildata']);
     }
     echo json_encode($result);
 }

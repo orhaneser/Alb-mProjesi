@@ -20,6 +20,7 @@
     "electron": "^4.0.2"
   },
   "dependencies": {
-    "alertifyjs": "^1.11.2"
+    "alertifyjs": "^1.11.2",
+    "spin.js": "^4.0.0"
   }
 }
