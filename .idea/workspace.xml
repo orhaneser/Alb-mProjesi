@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dcd77c7c-647c-4dde-af1e-df83bea3fa75" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Register/controller/Registercontroller.js" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Register/controller/Registercontroller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/RegisterCheck/controller/RegisterCheckcontroller.js" beforeDir="false" afterPath="$PROJECT_DIR$/Application/RegisterCheck/controller/RegisterCheckcontroller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/RegisterCheck/view/RegisterCheckview.html" beforeDir="false" afterPath="$PROJECT_DIR$/Application/RegisterCheck/view/RegisterCheckview.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Request/Request.js" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Request/Request.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/MailService/sendmail.php" beforeDir="false" afterPath="$PROJECT_DIR$/Services/MailService/sendmail.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/RegisterTemp/registertemp.php" beforeDir="false" afterPath="$PROJECT_DIR$/Services/RegisterTemp/registertemp.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/ServicesRequests.php" beforeDir="false" afterPath="$PROJECT_DIR$/Services/ServicesRequests.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -76,11 +66,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="161">
               <caret line="12" selection-start-line="12" selection-end-line="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor>
+                <caret column="36" selection-start-column="36" selection-end-column="36" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -143,6 +145,7 @@
         <option value="$PROJECT_DIR$/Application/Request/Request.js" />
         <option value="$PROJECT_DIR$/Application/Register/controller/Registercontroller.js" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -301,12 +304,12 @@
       <updated>1548431303645</updated>
       <workItem from="1548431304817" duration="6121000" />
       <workItem from="1548485415345" duration="5763000" />
-      <workItem from="1548600060778" duration="4170000" />
+      <workItem from="1548600060778" duration="4343000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16054000" />
+    <option name="totallyTimeSpent" value="16227000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
@@ -604,6 +607,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="161">
           <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor>
+            <caret column="36" selection-start-column="36" selection-end-column="36" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
