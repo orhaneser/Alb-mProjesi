@@ -5,24 +5,30 @@
  * Date: 26.01.2019
  * Time: 19:36
  */
-require_once('../dbclas/pdocls.php');
+require_once('../../dbclas/pdocls.php');
 header("Access-Control-Allow-Origin: *");
 header("Content-Type: application/json; charset=UTF-8");
-class UserMail extends  database
-{
-    public $result=array();
-    public  function  get($where,$param){
-        $usermail =$this->select("mail",$where,$param);
+$db=new database();
+$MN=$_POST['MN'];
+$result=array();
+
+switch ($MN){
+
+    case "get":
+        $usermail =$db->select("mail",$_POST['where'],(isset($_POST['param']) ? $_POST['param'] : array()));
         if (count($usermail) == 0) {
-            $this->result = array("status" => "None");
+            $result = array("status" => "None");
         } else {
             for ($i = 0; $i < count($usermail); $i++) {
-                $this->result[] = array("mid" => $usermail[$i]['mid'],
+                $result[] = array("mid" => $usermail[$i]['mid'],
                     "usid" => $usermail[$i]['usid'],
                     "mail" => $usermail[$i]['mail'],
                 );
             }
         }
-        return  $this->result;
-    }
+       echo  json_encode($result);
+
+
+        break;
+
 }

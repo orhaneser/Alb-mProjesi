@@ -1,9 +1,9 @@
 var Provider = {
-    AjaxPOST: function (json) {
+    AjaxPOST: function (servicename,json) {
         var deferred = new Promise(function (resolve, reject) {
             $.ajax({
                 type: "POST",
-                url: "http://localhost/electrotest/Services/ServicesRequests.php",
+                url: "http://localhost/electrotest/Services/"+servicename,
                 datatype: 'application/json',
                 data: json,
                 success: function (data, status, xhr) {

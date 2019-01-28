@@ -16,7 +16,6 @@ aplication.controller("loginctrl", function($scope, $location) {
     ) {
       Component.showmessage("Uyarı", "Kullanıcı Adı Veya Parola Geçersiz");
     }else{
-      var test=Component.RequestParse("ad=ahmet & soyad=ahmet");
     Provider.AjaxPOST({SN:"User",MN:"get",data:[test]}).then(function(res){
       debugger
     })

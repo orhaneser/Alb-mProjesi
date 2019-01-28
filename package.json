@@ -8,13 +8,13 @@
   },
   "repository": "https://github.com/YASIINN/Alb-mProjesi.git",
   "keywords": [
-    "Electron",
-    "quick",
-    "start",
-    "tutorial",
-    "demo"
+    "Albüm",
+    "Proje",
+    "Yasin Dalkılıç",
+    "Orhan Eser",
+    "Samet Öz"
   ],
-  "author": "GitHub",
+  "author": "Yasin Dalkılıç,Orhan Eser,Samet Öz",
   "license": "CC0-1.0",
   "devDependencies": {
     "electron": "^4.0.2"

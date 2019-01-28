@@ -2,7 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dcd77c7c-647c-4dde-af1e-df83bea3fa75" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/Login/controller/Logincontroller.js" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Login/controller/Logincontroller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/Register/controller/Registercontroller.js" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Register/controller/Registercontroller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/RegisterCheck/controller/RegisterCheckcontroller.js" beforeDir="false" afterPath="$PROJECT_DIR$/Application/RegisterCheck/controller/RegisterCheckcontroller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/Request/Request.js" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Request/Request.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/BlockList/BlockList.php" beforeDir="false" afterPath="$PROJECT_DIR$/Services/BlockList/BlockList.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/City/city.php" beforeDir="false" afterPath="$PROJECT_DIR$/Services/City/city.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Department/department.php" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Department/department.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Faculty/faculty.php" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Faculty/faculty.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/MailService/sendmail.php" beforeDir="false" afterPath="$PROJECT_DIR$/Services/MailService/sendmail.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/RegisterTemp/registertemp.php" beforeDir="false" afterPath="$PROJECT_DIR$/Services/RegisterTemp/registertemp.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/User/user.php" beforeDir="false" afterPath="$PROJECT_DIR$/Services/User/user.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/UserMail/UserMail.php" beforeDir="false" afterPath="$PROJECT_DIR$/Services/UserMail/UserMail.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,10 +27,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Services/ServicesRequests.php">
+        <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="549">
-              <caret line="70" column="49" selection-start-line="70" selection-start-column="49" selection-end-line="70" selection-end-column="49" />
+            <state relative-caret-position="396">
+              <caret line="27" column="59" selection-start-line="27" selection-start-column="59" selection-end-line="27" selection-end-column="59" />
             </state>
           </provider>
         </entry>
@@ -24,65 +38,62 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Application/Register/controller/Registercontroller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="212">
-              <caret line="79" column="17" selection-start-line="79" selection-start-column="14" selection-end-line="79" selection-end-column="17" />
+            <state relative-caret-position="202">
+              <caret line="16" column="20" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="20" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Application/RegisterCheck/view/RegisterCheckview.html">
+        <entry file="file://$PROJECT_DIR$/Application/Servicejs/FacultyService.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="61" selection-start-column="48" selection-end-column="61" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Application/RegisterCheck/controller/RegisterCheckcontroller.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" selection-start-line="2" selection-end-line="2" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Application/Request/Request.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="15" column="26" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Services/MailService/sendmail.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="31" column="44" selection-start-line="31" selection-start-column="40" selection-end-line="31" selection-end-column="44" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="12" selection-start-line="12" selection-end-line="12" />
+            <state relative-caret-position="204">
+              <caret line="12" column="43" selection-start-line="12" selection-start-column="43" selection-end-line="12" selection-end-column="43" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor>
-                <caret column="36" selection-start-column="36" selection-end-column="36" />
-              </first_editor>
-              <second_editor />
+        <entry file="file://$PROJECT_DIR$/Application/RegisterCheck/controller/RegisterCheckcontroller.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1317">
+              <caret line="88" column="27" selection-start-line="88" selection-start-column="27" selection-end-line="88" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Application/Register/RegisterService/RegisterService.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="202">
+              <caret line="39" selection-start-line="39" selection-end-line="46" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Services/Department/department.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="396">
+              <caret line="27" column="43" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Services/User/user.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="731">
+              <caret line="43" selection-start-line="43" selection-end-line="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Application/Servicejs/DepartmentService.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="16" column="24" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -108,6 +119,21 @@
       <find>local</find>
       <find>localStorage</find>
       <find>md5</find>
+      <find>getcity</find>
+      <find>blocklş</find>
+      <find>userma</find>
+      <find>addregister</find>
+      <find>register</find>
+      <find>registerdata</find>
+      <find>this</find>
+      <find>sendmai</find>
+      <find>(</find>
+      <find>+</find>
+      <find>%</find>
+      <find>location</find>
+      <find>registerservice</find>
+      <find>getfacult</find>
+      <find>getfac</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -116,8 +142,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Services/Department/department.php" />
-        <option value="$PROJECT_DIR$/Services/City/city.php" />
         <option value="$PROJECT_DIR$/Application/Register/view/Registerview.html" />
         <option value="$PROJECT_DIR$/Application/Plugins/bootstrapmin.js" />
         <option value="$PROJECT_DIR$/Application/resources/css/defaultalertify.css" />
@@ -132,20 +156,31 @@
         <option value="$PROJECT_DIR$/Application/resources/css/rtlmincbootstrap.css" />
         <option value="$PROJECT_DIR$/Application/resources/css/rtlalertfymin.css" />
         <option value="$PROJECT_DIR$/Application/resources/css/defaultrltalertify.css" />
-        <option value="$PROJECT_DIR$/Services/BlockList/BlockList.php" />
-        <option value="$PROJECT_DIR$/Services/UserMail/UserMail.php" />
         <option value="$PROJECT_DIR$/Application/Plugins/md5.js" />
-        <option value="$PROJECT_DIR$/Services/RegisterTemp/registertemp.php" />
         <option value="$PROJECT_DIR$/Application/Plugins/spinner.js" />
-        <option value="$PROJECT_DIR$/Services/MailService/sendmail.php" />
-        <option value="$PROJECT_DIR$/renderer.js" />
         <option value="$PROJECT_DIR$/Services/ServicesRequests.php" />
         <option value="$PROJECT_DIR$/Application/RegisterCheck/view/RegisterCheckview.html" />
-        <option value="$PROJECT_DIR$/Application/RegisterCheck/controller/RegisterCheckcontroller.js" />
-        <option value="$PROJECT_DIR$/Application/Request/Request.js" />
-        <option value="$PROJECT_DIR$/Application/Register/controller/Registercontroller.js" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/Application/Request/Request.js" />
+        <option value="$PROJECT_DIR$/Services/City/city.php" />
+        <option value="$PROJECT_DIR$/Services/BlockList/BlockList.php" />
+        <option value="$PROJECT_DIR$/Services/UserMail/UserMail.php" />
+        <option value="$PROJECT_DIR$/Application/SendMailService/MailService.js" />
+        <option value="$PROJECT_DIR$/Services/MailService/sendmail.php" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/Application/Register/controller/Registercontroller.js" />
+        <option value="$PROJECT_DIR$/renderer.js" />
+        <option value="$PROJECT_DIR$/Application/Servicejs/UserService.js" />
+        <option value="$PROJECT_DIR$/Services/User/user.php" />
+        <option value="$PROJECT_DIR$/Application/Register/RegisterService/RegisterService.js" />
+        <option value="$PROJECT_DIR$/Services/RegisterTemp/registertemp.php" />
+        <option value="$PROJECT_DIR$/Application/Login/controller/Logincontroller.js" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/Application/Servicejs/FacultyService.js" />
+        <option value="$PROJECT_DIR$/Services/Faculty/faculty.php" />
+        <option value="$PROJECT_DIR$/Services/Department/department.php" />
+        <option value="$PROJECT_DIR$/Application/Servicejs/DepartmentService.js" />
+        <option value="$PROJECT_DIR$/Application/RegisterCheck/controller/RegisterCheckcontroller.js" />
       </list>
     </option>
   </component>
@@ -158,7 +193,7 @@
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="10" />
     <option name="y" value="20" />
-    <option name="width" value="1349" />
+    <option name="width" value="1350" />
     <option name="height" value="700" />
   </component>
   <component name="ProjectView">
@@ -166,7 +201,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -183,12 +217,6 @@
               <item name="electrotest" type="b2602c69:ProjectViewProjectNode" />
               <item name="electrotest" type="462c0819:PsiDirectoryNode" />
               <item name="Application" type="462c0819:PsiDirectoryNode" />
-              <item name="Plugins" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="electrotest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="electrotest" type="462c0819:PsiDirectoryNode" />
-              <item name="Application" type="462c0819:PsiDirectoryNode" />
               <item name="Register" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -203,7 +231,7 @@
               <item name="electrotest" type="462c0819:PsiDirectoryNode" />
               <item name="Application" type="462c0819:PsiDirectoryNode" />
               <item name="Register" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
+              <item name="RegisterService" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="electrotest" type="b2602c69:ProjectViewProjectNode" />
@@ -222,25 +250,12 @@
               <item name="electrotest" type="b2602c69:ProjectViewProjectNode" />
               <item name="electrotest" type="462c0819:PsiDirectoryNode" />
               <item name="Application" type="462c0819:PsiDirectoryNode" />
-              <item name="RegisterCheck" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="electrotest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="electrotest" type="462c0819:PsiDirectoryNode" />
-              <item name="Application" type="462c0819:PsiDirectoryNode" />
-              <item name="Request" type="462c0819:PsiDirectoryNode" />
+              <item name="Servicejs" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="electrotest" type="b2602c69:ProjectViewProjectNode" />
               <item name="electrotest" type="462c0819:PsiDirectoryNode" />
               <item name="Services" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="electrotest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="electrotest" type="462c0819:PsiDirectoryNode" />
-              <item name="Services" type="462c0819:PsiDirectoryNode" />
-              <item name="BlockList" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="electrotest" type="b2602c69:ProjectViewProjectNode" />
@@ -258,18 +273,19 @@
               <item name="electrotest" type="b2602c69:ProjectViewProjectNode" />
               <item name="electrotest" type="462c0819:PsiDirectoryNode" />
               <item name="Services" type="462c0819:PsiDirectoryNode" />
-              <item name="MailService" type="462c0819:PsiDirectoryNode" />
+              <item name="RegisterTemp" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="electrotest" type="b2602c69:ProjectViewProjectNode" />
               <item name="electrotest" type="462c0819:PsiDirectoryNode" />
               <item name="Services" type="462c0819:PsiDirectoryNode" />
-              <item name="RegisterTemp" type="462c0819:PsiDirectoryNode" />
+              <item name="User" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -304,25 +320,26 @@
       <updated>1548431303645</updated>
       <workItem from="1548431304817" duration="6121000" />
       <workItem from="1548485415345" duration="5763000" />
-      <workItem from="1548600060778" duration="4343000" />
+      <workItem from="1548600060778" duration="4419000" />
+      <workItem from="1548655396568" duration="20643000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16227000" />
+    <option name="totallyTimeSpent" value="36946000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25637585" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25973153" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39944133" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.54888266" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -340,32 +357,6 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/Services/Faculty/faculty.php</url>
-          <line>8</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/Services/Faculty/faculty.php</url>
-          <line>9</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/Services/Faculty/faculty.php</url>
-          <line>10</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/Services/Faculty/faculty.php</url>
-          <line>19</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Application/resources/css/defaultalertify.css">
@@ -455,20 +446,6 @@
     <entry file="file://$PROJECT_DIR$/Application/Plugins/bootstrapmin.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Services/City/city.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="23" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Services/Faculty/faculty.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="5" lean-forward="true" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Application/resources/css/rtlmincbootstrap.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -506,13 +483,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Services/Department/department.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="5" lean-forward="true" selection-start-line="8" selection-start-column="4" selection-end-line="21" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dbclas/pdocls.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="365">
@@ -520,12 +490,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Plugins/spinner.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Plugins/spinner.js" />
     <entry file="file://$PROJECT_DIR$/Application/Register/view/Registerview.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
@@ -533,45 +498,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Services/BlockList/BlockList.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="5" lean-forward="true" selection-start-line="12" selection-start-column="2" selection-end-line="26" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Services/UserMail/UserMail.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" selection-start-line="7" selection-end-line="9" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Services/RegisterTemp/registertemp.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="56" column="53" selection-start-line="56" selection-start-column="47" selection-end-line="56" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Services/MailService/sendmail.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="31" column="44" selection-start-line="31" selection-start-column="40" selection-end-line="31" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/renderer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="41" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Services/ServicesRequests.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="549">
-          <caret line="70" column="49" selection-start-line="70" selection-start-column="49" selection-end-line="70" selection-end-column="49" />
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor>
+            <caret column="36" selection-start-column="36" selection-end-column="36" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
@@ -584,39 +517,180 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Application/Request/Request.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="15" column="26" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
+        <state relative-caret-position="340">
+          <caret line="20" selection-start-line="20" selection-end-line="20" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Application/RegisterCheck/controller/RegisterCheckcontroller.js">
+    <entry file="file://$PROJECT_DIR$/Services/City/city.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        <state relative-caret-position="119">
+          <caret line="7" selection-start-line="7" selection-end-line="11" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Register/controller/Registercontroller.js">
+    <entry file="file://$PROJECT_DIR$/Services/UserMail/UserMail.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="79" column="17" selection-start-line="79" selection-start-column="14" selection-end-line="79" selection-end-column="17" />
+        <state relative-caret-position="289">
+          <caret line="17" column="108" selection-start-line="17" selection-start-column="108" selection-end-line="17" selection-end-column="108" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Services/BlockList/BlockList.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" selection-start-line="7" selection-end-line="11" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/SendMailService/MailService.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="38" selection-start-line="4" selection-start-column="38" selection-end-line="4" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Services/ServicesRequests.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="331">
+          <caret line="62" column="57" selection-start-line="62" selection-start-column="45" selection-end-line="62" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Services/MailService/sendmail.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="365">
+          <caret line="50" column="28" lean-forward="true" selection-start-line="50" selection-start-column="28" selection-end-line="50" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package-lock.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="8" column="30" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-765" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/renderer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Services/RegisterTemp/registertemp.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="502">
+          <caret line="79" selection-start-line="79" selection-end-line="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Login/controller/Logincontroller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Servicejs/FacultService">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Servicejs/UserService.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="1" lean-forward="true" selection-end-line="10" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        <state relative-caret-position="396">
+          <caret line="27" column="59" selection-start-line="27" selection-start-column="59" selection-end-line="27" selection-end-column="59" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor>
-            <caret column="36" selection-start-column="36" selection-end-column="36" />
-          </first_editor>
-          <second_editor />
+    <entry file="file://$PROJECT_DIR$/Application/Servicejs/FacultyService.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="43" selection-start-line="12" selection-start-column="43" selection-end-line="12" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Register/controller/Registercontroller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="16" column="20" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Services/User/user.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="731">
+          <caret line="43" selection-start-line="43" selection-end-line="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../phpMyAdmin/tbl_structure.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../phpMyAdmin/sql.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Services/Faculty/faculty.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="22" column="1" lean-forward="true" selection-start-line="22" selection-start-column="1" selection-end-line="35" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Servicejs/DepartmentService.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="24" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Services/Department/department.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="27" column="43" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Register/RegisterService/RegisterService.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="39" selection-start-line="39" selection-end-line="46" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/RegisterCheck/controller/RegisterCheckcontroller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1317">
+          <caret line="88" column="27" selection-start-line="88" selection-start-column="27" selection-end-line="88" selection-end-column="27" />
         </state>
       </provider>
     </entry>

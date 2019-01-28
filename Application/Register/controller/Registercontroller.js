@@ -19,13 +19,12 @@ aplication.controller("registerctrl", function($scope, $location,$http) {
   }
   $scope.getcity=()=>{
     if(localStorage.getItem("city")==null ||localStorage.getItem("city")=="" ){
-      Provider.AjaxPOST({SN:"City",MN:"get",where:"1"}).then(function(res){
+      RegisterService.getcity({MN:"get",where:"1"}).then(function (res) {
       $scope.citylist=[];
       $scope.$apply(()=>{
         localStorage.setItem("city",JSON.stringify(res))
         res.forEach(element => {
           $scope.citylist.push(element);
-
         });
       });
     })
@@ -35,7 +34,7 @@ aplication.controller("registerctrl", function($scope, $location,$http) {
   }
   $scope.getfaculty=()=>{
     if(localStorage.getItem("faculty")==null || localStorage.getItem("faculty")=="" ){
-    Provider.AjaxPOST({SN:"Faculty",MN:"get",where:"1"}).then(function(res){
+      RegisterService.getfaculty({MN:"get",where:"1"}).then(function (res) {
       if(res!="None") {
         localStorage.setItem("faculty", JSON.stringify(res))
         $scope.$apply(() => {
@@ -51,7 +50,7 @@ aplication.controller("registerctrl", function($scope, $location,$http) {
   }
   $scope.getdepartmant=(faculty)=>{
       $scope.deparmentlist=[];
-      Provider.AjaxPOST({SN: "Department", MN: "get", where: "fid=?", param: [faculty.fid]}).then(function (res) {
+  RegisterService.getdepartmant({MN: "get", where: "fid=?", param: [faculty.fid]}).then(function (res) {
         if(res!="None"){
           $scope.$apply(() => {
             res.forEach(element => {
@@ -69,7 +68,7 @@ aplication.controller("registerctrl", function($scope, $location,$http) {
     return text;
   },
   $scope.addRegister=(name,lastname,phone,mail,faculty,department,pass,city,year)=>{
-    Provider.AjaxPOST({SN:"RegisterTemp",MN:"add",
+      RegisterService.addRegister({MN:"add",
       registerdata:[{
         uname:name.toUpperCase(),
         ulastname:lastname.toUpperCase(),
@@ -78,14 +77,14 @@ aplication.controller("registerctrl", function($scope, $location,$http) {
         ufaculty:faculty,
         udepartment:department,
         upass:md5(pass),
-        rcode:md5($scope.makeid())+"%"+ new Date().toLocaleDateString().split(".")[0] + new Date().toLocaleDateString().split(".")[1] + new Date().toLocaleDateString().split(".")[2],
+        rcode:md5($scope.makeid())+"+"+ new Date().toLocaleDateString().split(".")[0] + new Date().toLocaleDateString().split(".")[1] + new Date().toLocaleDateString().split(".")[2],
         ucity:city,
         uyear:year
       }]
     }).then(function (res) {
           if(res=="Succes"){
-            Provider.AjaxPOST({SN:"RegisterTemp",MN:"get",where:"umail=?",param:[$scope.registerdata.email]}).then(function (res) {
-              debugger
+
+            RegisterService.getRegister({ MN:"get",where:"umail=?",param:[$scope.registerdata.email]}).then(function (res) {
               if(typeof res =="object"){
                 var host="http://localhost/electrotest/#!/RegisterCheck?"
                 var msgg="<html><body>";
@@ -98,9 +97,18 @@ aplication.controller("registerctrl", function($scope, $location,$http) {
                 msgg+="<br>";
                 msgg+="<b>Tüm Haklar Gizlidir.</b>";
                 msgg+="</body></html>";
-                Provider.AjaxPOST({SN:"MailService",MN:"sendmail",maildata:[{subject:"KAYIT AKTİVİTASYONU",messega:msgg,mail:res[0].umail}]}).then(function (res) {
+                MailService.sendmail({MN:"sendmail",maildata:[{subject:"KAYIT AKTİVİTASYONU",messega:msgg,mail:res[0].umail}]}).then(function (res) {
                 if(res=="Succes"){
-
+                  $scope.$apply(()=>{
+                    $scope.registerdata = {
+                      ad: "",
+                      soyad: "",
+                      email: "",
+                      password: "",
+                      cpassword: "",
+                      phone: ""
+                    };
+                  })
                 }
                 else{
                   //mail gitmedi
@@ -162,11 +170,11 @@ aplication.controller("registerctrl", function($scope, $location,$http) {
       Component.showmessage("Uyarı", "Telefon Numrası Geçersiz");
     }
     else {
-      Provider.AjaxPOST({SN: "BlockList", MN: "get", where: "email=? OR phone=?", param: [$scope.registerdata.email,$scope.registerdata.phone]}).then(function (res) {
+      RegisterService.getblocklist({MN: "get", where: "email=? OR phone=?", param: [$scope.registerdata.email,$scope.registerdata.phone]}).then(function (res) {
         if(res=="None"){
-            Provider.AjaxPOST({SN:"UserMail",MN:"get",where:"mail=?",param:[$scope.registerdata.email]}).then(function (res) {
+          RegisterService.getusermail({MN:"get",where:"mail=?",param:[$scope.registerdata.email]}).then(function (res) {
                 if(res=="None"){
-                  Provider.AjaxPOST({SN:"RegisterTemp",MN:"get",where:"umail=?",param:[$scope.registerdata.email]}).then(function (res) {
+                  RegisterService.getRegister({MN:"get",where:"umail=?",param:[$scope.registerdata.email]}).then(function (res) {
                         if(res=="None"){
                               $scope.addRegister( $scope.registerdata.ad.toUpperCase(),$scope.registerdata.soyad.toUpperCase(),$scope.registerdata.phone,$scope.registerdata.email,$scope.fselect.fid,$scope.dselect.blid, $scope.registerdata.password,$scope.cselect.cid,$scope.selected);
                         }else{
