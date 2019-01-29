@@ -16,9 +16,9 @@ aplication.controller("loginctrl", function($scope, $location) {
     ) {
       Component.showmessage("Uyarı", "Kullanıcı Adı Veya Parola Geçersiz");
     }else{
-    Provider.AjaxPOST({SN:"User",MN:"get",data:[test]}).then(function(res){
-      debugger
-    })
+      UserService.getUser({MN:"get"}).then(function (res) {
+
+      })
       //user kontrol
       //kara liste kontrol
     }

@@ -1,11 +1,12 @@
 const {app, BrowserWindow,Menu} = require('electron')
-let mainWindow
+const md5 = require('md5');
+let mainWindow;
 function createWindow () {
   mainWindow = new BrowserWindow({
     width: 800,
     height: 600,
-    fullscreenable: false,
-    resizable: false,
+    /*fullscreenable: false,
+    resizable: false,*/
     icon :"./Application/resources/img/icon.png"
   })
   mainWindow.loadFile('index.html')

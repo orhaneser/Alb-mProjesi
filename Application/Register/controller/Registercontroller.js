@@ -79,8 +79,8 @@ aplication.controller("registerctrl", function($scope, $location,$http) {
         umail:mail,
         ufaculty:faculty,
         udepartment:department,
-        upass:md5(pass),
-        rcode:md5($scope.makeid())+"+"+ new Date().toLocaleDateString().split(".")[0] + new Date().toLocaleDateString().split(".")[1] + new Date().toLocaleDateString().split(".")[2],
+        upass:MD5(pass),
+        rcode:MD5($scope.makeid())+"+"+ new Date().toLocaleDateString().split(".")[0] + new Date().toLocaleDateString().split(".")[1] + new Date().toLocaleDateString().split(".")[2],
         ucity:city,
         uyear:year
       }]
@@ -99,9 +99,7 @@ aplication.controller("registerctrl", function($scope, $location,$http) {
                 msgg+="<br>";
                 msgg+="<b>Tüm Haklar Gizlidir.</b>";
                 msgg+="</body></html>";
-                debugger
                 MailService.sendmail({MN:"sendmail",maildata:[{subject:"KAYIT AKTİVİTASYONU",messega:msgg,mail:res[0].umail}]}).then(function (res) {
-                debugger
                 if(res=="Succes"){
                   $scope.$apply(()=>{
                     $scope.registerdata = {
