@@ -1,39 +1,33 @@
 aplication.controller("registercheckctrl", function($scope, $location) {
    $scope.checkRegister=()=>{
-       debugger
        var day =window.location.hash.split("?")[1].split("%20")[1][0]+window.location.hash.split("?")[1].split("%20")[1][1]
 
        if (parseInt(day) + 2 == parseInt(new Date().toLocaleDateString().split(".")[0])) {
-            RegisterService.getRegister({MN: "GET",where: "rcode=?",param: [window.location.hash.split("?")[1]]}).then(function (res) {
+            RegisterService.getRegister({MN: "get",where: "rcode=?",param: [window.location.hash.split("?")[1]]}).then(function (res) {
                 alertify
                     .alert("Bu Link Artık Geçersiz", function(){
                         alertify.message('OK');
                     });
-
-                $scope.deltemp();
+                $scope.deltemp(res[0].rcode);
 
             })
        } else {
-
            RegisterService.getRegister({ MN: "get",  where: "rcode=?", param: [window.location.hash.split("?")[1].replace("%20","+")] }).then(function (res) {
                    $scope.addUser(res);
            })
        }
    }
     $scope.deltemp=(code)=>{
-var deferred =new Promise((resolve,reject)=>{
+    var deferred =new Promise((resolve,reject)=>{
     RegisterService.delRegister({MN:"del",where:"rcode=?",param:[code]}).then(function (res) {
         if(res=="Succes"){
             $location.path('/');
             window.location.hash=""
             resolve(true);
         }
-
     })
-
 })
         return deferred;
-
     };
    $scope.updateFacultCount=(fid)=>{
        FacultyService.getfaculty({MN:"get",where:"fid=?",param:[fid]}).then(function (res) {
@@ -43,7 +37,6 @@ var deferred =new Promise((resolve,reject)=>{
                    fscount:(parseInt(res[0].fscount)+1).toString(),
                }]}).then(function (res) {
                 if(res=="Succes"){
-
                 }
            })
        })
@@ -59,9 +52,7 @@ var deferred =new Promise((resolve,reject)=>{
             }]
         }).then(function (res) {
             if(res=="Succes"){
-
             }
-
         })
     })
    }
@@ -79,14 +70,12 @@ var deferred =new Promise((resolve,reject)=>{
             mail: param[0].umail,
             phone: param[0].uphone,
         }
-
         UserService.addUser({MN:"add",userdata:[userjson]}).then(function (res) {
                if(res=="Succes"){
                    $scope.deltemp(param[0].rcode).then(function (res) {
                       if(res==true){
                            $scope.updateFacultCount(param[0].ufaculty);
                            $scope.updateDepartmentCount(param[0].udepartment);
-                           
                        }
                    })
                }

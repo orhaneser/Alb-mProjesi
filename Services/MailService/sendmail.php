@@ -46,9 +46,9 @@ $results=array();
                     $result = false;
                 }
                 if ($result == true) {
-                    return $results= array("status" => "Succes");
+                    $results= array("status" => "Succes");
                 } else {
-                    return $results= array("status" => "None");
+                    $results= array("status" => "None");
                 }
 
             echo  json_encode($results);

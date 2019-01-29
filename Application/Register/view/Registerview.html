@@ -1,3 +1,11 @@
+<style>
+    .input-group .form-control{
+        z-index: 0;
+    }
+    .control-label{
+        padding-top: 0px;
+    }
+</style>
 <div ng-controller="registerctrl" ng-model="registerdata" ng-init="getplugins()" >
 <div class="container">
             <ul class="nav navbar-nav navbar-right">
@@ -11,8 +19,8 @@
     <legend><center><h2><b>Kayıt Ol</b></h2></center></legend><br>
     
     
-    <div class="form-group">
-      <label class="col-md-4 control-label">Ad</label>  
+    <div class="form-group" style="display: flex;align-items: center;">
+      <label class="col-md-4 control-label" >Ad</label>
       <div class="col-md-4 inputGroupContainer">
       <div class="input-group">
       <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
@@ -22,7 +30,7 @@
     </div>
     
     
-    <div class="form-group">
+    <div class="form-group" style="display: flex;align-items: center;">
       <label class="col-md-4 control-label" >Soyad</label> 
         <div class="col-md-4 inputGroupContainer">
         <div class="input-group">
@@ -31,8 +39,8 @@
         </div>
       </div>
     </div>
-    
-      <div class="form-group"> 
+
+      <div class="form-group" style="display: flex;align-items: center;">
       <label class="col-md-4 control-label">Fakülteniz </label>
         <div class="col-md-4 selectContainer">
         <div class="input-group">
@@ -43,7 +51,7 @@
     </div>
     </div>
 
-    <div class="form-group"> 
+    <div class="form-group" style="display: flex;align-items: center;">
             <label class="col-md-4 control-label">Bölümünüz </label>
               <div class="col-md-4 selectContainer">
               <div class="input-group">
@@ -54,7 +62,7 @@
           </div>
           </div>
 
-          <div class="form-group"> 
+          <div class="form-group" style="display: flex;align-items: center;">
       <label class="col-md-4 control-label">Şehir </label>
         <div class="col-md-4 selectContainer">
         <div class="input-group">
@@ -67,7 +75,7 @@
     </div>
 
     
-    <div class="form-group"> 
+    <div class="form-group" style="display: flex;align-items: center;">
         <label class="col-md-4 control-label">Mezuniyet Yılı </label>
           <div class="col-md-4 selectContainer">
           <div class="input-group">
@@ -78,7 +86,7 @@
       </div>
       </div>
     
-    <div class="form-group">
+    <div class="form-group" style="display: flex;align-items: center;">
       <label class="col-md-4 control-label">Email Adresi</label>  
       <div class="col-md-4 inputGroupContainer">
       <div class="input-group">
@@ -89,7 +97,7 @@
     </div>
     
     
-    <div class="form-group">
+    <div class="form-group" style="display: flex;align-items: center;">
       <label class="col-md-4 control-label" >Parolanız</label> 
         <div class="col-md-4 inputGroupContainer">
         <div class="input-group">
@@ -100,7 +108,7 @@
     </div>
     
     
-    <div class="form-group">
+    <div class="form-group" style="display: flex;align-items: center;">
       <label class="col-md-4 control-label" >Parola Tekrarı</label> 
         <div class="col-md-4 inputGroupContainer">
         <div class="input-group">
@@ -109,11 +117,7 @@
         </div>
       </div>
     </div>
-    
-    
-    
-           
-    <div class="form-group">
+    <div class="form-group" style="display: flex;align-items: center;">
       <label class="col-md-4 control-label">Telefon No.</label>  
         <div class="col-md-4 inputGroupContainer">
         <div class="input-group">
@@ -122,7 +126,23 @@
     </div>
       </div>
     </div>
-    
+        <div class="form-group" ng-init="createCode()" style="display: flex;align-items: center;">
+            <label class="col-md-4 control-label">Güvenlik Kodu</label>
+            <div class="col-md-4 inputGroupContainer">
+                <div class="input-group" style="display: flex; align-items: center;">
+                    <div id="captcha">
+                    </div>
+                    <button ng-click="createCode()" style="  background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;"><i class="fas fa-sync"></i></button>
+                    <input ng-model="captchacode" maxlength="6" name="code" placeholder="Güvenlik Kodu" class="form-control" id="cpcode" type="text" style="margin-left: 10px;">
+                </div>
+            </div>
+        </div>
+
     
     
     <div class="form-group">
@@ -138,3 +158,6 @@
     </form>
     </div>
   </div>
+<div class="preloader" style="display: none;">
+    <div class="loader"></div>
+</div>

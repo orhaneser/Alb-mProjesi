@@ -1,4 +1,5 @@
 aplication.controller("registerctrl", function($scope, $location,$http) {
+  var code;
   $scope.facultylist=[];
   $scope.registerdata = {
     ad: "",
@@ -8,6 +9,7 @@ aplication.controller("registerctrl", function($scope, $location,$http) {
     cpassword: "",
     phone: ""
   };
+  $scope.captchacode="";
   $scope.yearsarray = [];
   const year = parseInt(new Date().toLocaleDateString().split(".")[2]);
   for (let index = year; index >= year - 20; index--) {
@@ -68,6 +70,7 @@ aplication.controller("registerctrl", function($scope, $location,$http) {
     return text;
   },
   $scope.addRegister=(name,lastname,phone,mail,faculty,department,pass,city,year)=>{
+    $('.preloader').css('display',"block");
       RegisterService.addRegister({MN:"add",
       registerdata:[{
         uname:name.toUpperCase(),
@@ -83,7 +86,6 @@ aplication.controller("registerctrl", function($scope, $location,$http) {
       }]
     }).then(function (res) {
           if(res=="Succes"){
-
             RegisterService.getRegister({ MN:"get",where:"umail=?",param:[$scope.registerdata.email]}).then(function (res) {
               if(typeof res =="object"){
                 var host="http://localhost/electrotest/#!/RegisterCheck?"
@@ -97,7 +99,9 @@ aplication.controller("registerctrl", function($scope, $location,$http) {
                 msgg+="<br>";
                 msgg+="<b>Tüm Haklar Gizlidir.</b>";
                 msgg+="</body></html>";
+                debugger
                 MailService.sendmail({MN:"sendmail",maildata:[{subject:"KAYIT AKTİVİTASYONU",messega:msgg,mail:res[0].umail}]}).then(function (res) {
+                debugger
                 if(res=="Succes"){
                   $scope.$apply(()=>{
                     $scope.registerdata = {
@@ -108,22 +112,51 @@ aplication.controller("registerctrl", function($scope, $location,$http) {
                       cpassword: "",
                       phone: ""
                     };
+                    $scope.fselect=null;
+                    $scope.dselect=null;
+                    $scope.cselect=null;
+                    $scope.selected=null;
+                    $scope.captchacode="";
                   })
+                  $('.preloader').addClass('complete');
+                  Component.showmessage("Bilgilendirme","Kayıt İşleminiz Başarı ile Gerçekleşti Lütfen Email Adresinizi Kontrol Ediniz")
                 }
+
                 else{
-                  //mail gitmedi
+                  Component.showmessage("Uyaro","Mail Gönderilirken Bir Hata Meydana Geldi Lütfen Daha Sonra Tekrar Deneyiniz.")
                 }
                 })
               }else{
               //kayıt yok
               }
             })
-
-
           }else{
-            //kayıt eklenemedi
+            Component.showmessage("Uyaro","Kaydınız Oluşturulurken Bir Promlem Gerçekleşti Lütfen Daha Sonra Tekrar Deneyiniz.")
           }
     })
+  }
+  $scope.createCode=()=>{
+    document.getElementById('captcha').innerHTML = "";
+    var charsArray =
+        "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ@!#$%^&*";
+    var lengthOtp = 6;
+    var captcha = [];
+    for (var i = 0; i < lengthOtp; i++) {
+      var index = Math.floor(Math.random() * charsArray.length + 1); //get the next character from the array
+      if (captcha.indexOf(charsArray[index]) == -1)
+        captcha.push(charsArray[index]);
+      else i--;
+    }
+    var canv = document.createElement("canvas");
+    canv.id = "captcha";
+    canv.width = 100;
+    canv.height = 50;
+    var ctx = canv.getContext("2d");
+    ctx.font = "25px Georgia";
+    ctx.strokeText(captcha.join(""), 0, 30);
+    code = captcha.join("");
+    document.getElementById("captcha").appendChild(canv);
+    console.log(code);
   }
   $scope.checkRegisterForm = () => {
     if (
@@ -168,6 +201,8 @@ aplication.controller("registerctrl", function($scope, $location,$http) {
       $scope.registerdata.phone.trim() == ""
     ) {
       Component.showmessage("Uyarı", "Telefon Numrası Geçersiz");
+    }else if(code!=$scope.captchacode){
+      Component.showmessage("Uyarı", "Güvenlik Kodu Geçersiz");
     }
     else {
       RegisterService.getblocklist({MN: "get", where: "email=? OR phone=?", param: [$scope.registerdata.email,$scope.registerdata.phone]}).then(function (res) {
