@@ -9,6 +9,14 @@ var  UserService= {
         })
         return deferred;
     },
+    loginControl:function(json){
+        var deferred = new Promise(function (resolve, reject) {
+            Provider.AjaxPOST(loginservice, json).then(function (res) {
+                resolve(res);
+            })
+        })
+        return deferred;
+    },
     getUser:function (json) {
         var deferred = new Promise(function (resolve, reject) {
             Provider.AjaxPOST(userservice, json).then(function (res) {
