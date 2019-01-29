@@ -11,5 +11,26 @@ var LoginControl={
             })
         })
         return deferred;
-    }
+    },
+    outLogin: function () {
+        localStorage.clear();
+        sessionStorage.clear();
+    },
+    CheckSession: function () {
+
+    },
+    onLogin: function () {
+        var deferred = new Promise(function (resolve, reject) {
+            var st = sessionStorage.getItem("UA");
+            var ls = localStorage.getItem("UA")
+            if (st && ls) {
+                if (st == ls) {
+
+                }
+            } else {
+                UseronLogin.outLogin()
+            }
+        })
+        return deferred;
+    },
 }
