@@ -10,9 +10,12 @@ aplication.config(function ($routeProvider) {
         }).when("/RegisterCheck",{
             templateUrl: "./Application/RegisterCheck/view/RegisterCheckview.html",
             controller:"registercheckctrl"
-        })
+        }).when("/Dashboard",{
+        templateUrl: "./Application/Dashboard/view/Dashboardview.html",
+        controller:"Dashboardctrl"
+    })
       .otherwise({
-            template: "<h1>Sory Not Found</h1>"
+          templateUrl: "./Application/404/view/404.html",
         });
 });
 

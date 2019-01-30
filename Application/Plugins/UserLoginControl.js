@@ -1,13 +1,21 @@
 var LoginControl={
-    onLogin:function (param) {
+    onLoginCheck:function (param) {
         localStorage.clear();
         sessionStorage.clear();
         var deferred = new Promise(function (resolve, reject) {
-            UserService.loginControl(param).then(function (res) {
-                    if(res){
-                        localStorage.setItem("UA", Base64.encode(JSON.stringify(res)));
-                        sessionStorage.setItem("UA", Base64.encode(JSON.stringify(res)));
-                    }
+            UserService.loginControl({
+                MN: "get", param: [{
+                    uname: param.usname,
+                    upass: MD5(param.upass)
+                }]
+            }).then(function (res) {
+                if(typeof res=="object"){
+                    localStorage.setItem("UA", Base64.encode(JSON.stringify(res)));
+                    sessionStorage.setItem("UA", Base64.encode(JSON.stringify(res)));
+                    resolve(true);
+                }else{
+                    resolve(false);
+                }
             })
         })
         return deferred;
