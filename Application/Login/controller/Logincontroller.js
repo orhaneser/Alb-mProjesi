@@ -20,17 +20,16 @@ aplication.controller("loginctrl", function($scope, $location) {
         debugger
         if(res=="None") {
           LoginControl.onLoginCheck($scope.login).then(function (res) {
-            if(res){
-              $location.path("#/Dashboard")
+            debugger
+            if(res!=false){
+              window.open("/electrotest/#!/Dashboard","_self");
+              window.location.reload();
             }
           })
-
         }else{
           Component.showmessage("Uyarı","Bu Kullanıcı Hesabı Engellenmiştir.")
         }
       })
-
-      //kara liste kontrol
     }
   };
 });

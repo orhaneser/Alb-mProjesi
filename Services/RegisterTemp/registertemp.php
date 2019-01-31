@@ -19,6 +19,7 @@ $result=array();
             } else {
                 for ($i = 0; $i < count($registertemp); $i++) {
                     $result[] = array("rtid" => $registertemp[$i]['rtid'],
+                        "statuscode"=>"200",
                         "uname" => $registertemp[$i]['uname'],
                         "ulastname" => $registertemp[$i]['ulastname'],
                         "uphone" => $registertemp[$i]['uphone'],

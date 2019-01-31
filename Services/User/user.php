@@ -8,6 +8,36 @@ $result=array();
 
 
 switch ($MN) {
+    case "get":
+        $userrows=$db->getrows("SELECT * FROM user u INNER JOIN faculty f on u.fid=f.fid INNER JOIN department d ON u.did=d.blid INNER JOIN city c ON u.city=c.cid INNER JOIN authority a ON u.uauth=a.aid INNER JOIN mail m ON u.usid=m.usid INNER JOIN phone p ON u.usid=p.usid WHERE ulgnname=?",array($_POST['param'][0]));
+        if (count($userrows) == 0) {
+            $result = array("status" => "None");
+        }else{
+                for ($i = 0; $i < count($userrows); $i++) {
+                    $result[] = array("status" => "OK",
+                        "statuscode"=>"200",
+                        "usid" => $userrows[$i]['usid'],
+                        "usname" => $userrows[$i]['usname'],
+                        "uslname" => $userrows[$i]["uslname"],
+                        "uauth" => $userrows[$i]["uauth"],
+                        "atxt" => $userrows[$i]["atxt"],
+                        "city" => $userrows[$i]["city"],
+                        "cname" => $userrows[$i]["cname"],
+                        "uyear" => $userrows[$i]["uyear"],
+                        "fid" => $userrows[$i]["fid"],
+                        "fname" => $userrows[$i]["fname"],
+                        "did" => $userrows[$i]["did"],
+                        "blname" => $userrows[$i]["blname"],
+                        "ulgnname" => $userrows[$i]["ulgnname"],
+                        "mail" => $userrows[$i]["mail"],
+                        "phone" => $userrows[$i]["phone"],
+                        );
+                }
+        }
+        echo  json_encode($result);
+
+
+        break;
     case "add":
         $userdata = $_POST['userdata'];
         for ($i = 0; $i < count($_POST['userdata']); $i++) {
@@ -55,24 +85,16 @@ switch ($MN) {
                             }
                     }
                 }else{
-
-
                     $result = array("status" => "None");
                     $db->DoOrDie(false);
-
-
                 }
-
-
             }else{
-
-
                 $result = array("status" => "None");
                 $db->DoOrDie(false);
-
-
             }
             echo json_encode($result);
             break;
+
         }
+
 }

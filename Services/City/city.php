@@ -19,6 +19,7 @@ $result=array();
                 } else {
                     for ($i = 0; $i < count($cityrows); $i++) {
                         $result[] = array("cid" => $cityrows[$i]['cid'],
+                            "statuscode"=>"200",
                             "cname" => $cityrows[$i]['cname'],
                             "ccount" => $cityrows[$i]['ccount'],
                         );

@@ -15,6 +15,7 @@ $result=array();
                 } else {
                     for ($i = 0; $i < count($depertmanetrows); $i++) {
                         $result[] = array("blid" => $depertmanetrows[$i]['blid'],
+                            "statuscode"=>"200",
                             "blname" => $depertmanetrows[$i]['blname'],
                             "fid" => $depertmanetrows[$i]['fid'],
                             "bcount" => $depertmanetrows[$i]['bcount'],

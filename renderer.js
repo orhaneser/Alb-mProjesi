@@ -12,10 +12,11 @@ aplication.config(function ($routeProvider) {
             controller:"registercheckctrl"
         }).when("/Dashboard",{
         templateUrl: "./Application/Dashboard/view/Dashboardview.html",
-        controller:"Dashboardctrl"
+        controller:"dashboardctrl"
     })
       .otherwise({
           templateUrl: "./Application/404/view/404.html",
+          controller:"notctrl"
         });
 });
 

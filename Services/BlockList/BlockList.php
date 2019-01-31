@@ -19,6 +19,7 @@ $result=array();
                     } else {
                         for ($i = 0; $i < count($blocklist); $i++) {
                             $result[] = array("id" => $blocklist[$i]['id'],
+                                "statuscode"=>"200",
                                 "email" => $blocklist[$i]['email'],
                                 "phone" => $blocklist[$i]['phone'],
                             );
