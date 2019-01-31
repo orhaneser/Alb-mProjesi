@@ -1,22 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dcd77c7c-647c-4dde-af1e-df83bea3fa75" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/404/view/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/Application/404/view/404.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Dashboard/controller/Dashboardcontroller.js" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Dashboard/controller/Dashboardcontroller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Dashboard/view/Dashboardview.html" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Dashboard/view/Dashboardview.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Login/controller/Logincontroller.js" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Login/controller/Logincontroller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Plugins/UserLoginControl.js" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Plugins/UserLoginControl.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/BlockList/BlockList.php" beforeDir="false" afterPath="$PROJECT_DIR$/Services/BlockList/BlockList.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/City/city.php" beforeDir="false" afterPath="$PROJECT_DIR$/Services/City/city.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Department/department.php" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Department/department.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Faculty/faculty.php" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Faculty/faculty.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/RegisterTemp/registertemp.php" beforeDir="false" afterPath="$PROJECT_DIR$/Services/RegisterTemp/registertemp.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/User/user.php" beforeDir="false" afterPath="$PROJECT_DIR$/Services/User/user.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/renderer.js" beforeDir="false" afterPath="$PROJECT_DIR$/renderer.js" afterDir="false" />
-    </list>
+    <list default="true" id="dcd77c7c-647c-4dde-af1e-df83bea3fa75" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -471,12 +456,12 @@
       <workItem from="1548742925146" duration="18268000" />
       <workItem from="1548829779972" duration="8420000" />
       <workItem from="1548857574444" duration="1550000" />
-      <workItem from="1548914430839" duration="11033000" />
+      <workItem from="1548914430839" duration="12042000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="78602000" />
+    <option name="totallyTimeSpent" value="79611000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
