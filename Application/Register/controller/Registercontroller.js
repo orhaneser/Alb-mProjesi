@@ -88,17 +88,20 @@ aplication.controller("registerctrl", function($scope, $location,$http) {
           if(res=="Succes"){
             RegisterService.getRegister({ MN:"get",where:"umail=?",param:[$scope.registerdata.email]}).then(function (res) {
               if(typeof res =="object"){
+
                 var host="http://localhost/electrotest/#!/RegisterCheck?"
-                var msgg="<html><body>";
-                msgg+="<b>Kayıt oldugunuz için teşekkürler</b>";
-                msgg+="<br>";
-                msgg+="<b>buraya tıklayarak kaydınızı aktif edebilirsiniz</b>";
-                msgg+="<br>";
-                msgg+=host+res[0].rcode;
-                msgg+="<hr>";
-                msgg+="<br>";
-                msgg+="<b>Tüm Haklar Gizlidir.</b>";
-                msgg+="</body></html>";
+                var msgarr=["<html><body>","<b>Kayıt oldugunuz için teşekkürler</b>","<br>","<b>buraya tıklayarak kaydınızı aktif edebilirsiniz</b>","<br>",host+res[0].rcode,"<hr>","<br>","<b>Tüm Haklar Gizlidir.</b>","</body></html>"]
+                var msgg=msgarr.join("");
+                // var msgg="<html><body>";
+                // msgg+="<b>Kayıt oldugunuz için teşekkürler</b>";
+                // msgg+="<br>";
+                // msgg+="<b>buraya tıklayarak kaydınızı aktif edebilirsiniz</b>";
+                // msgg+="<br>";
+                // msgg+=host+res[0].rcode;
+                // msgg+="<hr>";
+                // msgg+="<br>";
+                // msgg+="<b>Tüm Haklar Gizlidir.</b>";
+                // msgg+="</body></html>";
                 MailService.sendmail({MN:"sendmail",maildata:[{subject:"KAYIT AKTİVİTASYONU",messega:msgg,mail:res[0].umail}]}).then(function (res) {
                 if(res=="Succes"){
                   $scope.$apply(()=>{
@@ -140,7 +143,7 @@ aplication.controller("registerctrl", function($scope, $location,$http) {
     var lengthOtp = 6;
     var captcha = [];
     for (var i = 0; i < lengthOtp; i++) {
-      var index = Math.floor(Math.random() * charsArray.length + 1); //get the next character from the array
+      var index = Math.floor(Math.random() * charsArray.length + 1); 
       if (captcha.indexOf(charsArray[index]) == -1)
         captcha.push(charsArray[index]);
       else i--;
@@ -154,7 +157,6 @@ aplication.controller("registerctrl", function($scope, $location,$http) {
     ctx.strokeText(captcha.join(""), 0, 30);
     code = captcha.join("");
     document.getElementById("captcha").appendChild(canv);
-    console.log(code);
   }
   $scope.checkRegisterForm = () => {
     if (
