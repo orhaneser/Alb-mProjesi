@@ -11,3 +11,5 @@ header("Content-Type: application/json; charset=UTF-8");
 $db=new database();
 
 
+$test=$db->select("department","1",array());
+echo base64_encode($test[0]['dpphoto']);

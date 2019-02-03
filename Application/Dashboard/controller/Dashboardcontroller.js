@@ -11,8 +11,16 @@ $scope.getdata=()=>{
 
     $scope.$apply(()=>{
         $scope.userdata = JSON.parse(Base64.decode(localStorage.getItem("UA")))[0];
+        $scope.getUserDepartment();
     })
-
+    }
+    $scope.getUserDepartment=()=>{
+     departmentService.getdepartment({MN:"get", where: "fid=?", param: [$scope.userdata.fid]}).then(function (res) {
+         $scope.$apply(()=>{
+             $scope.dphotos=res;
+         })
+         console.log($scope.dphotos);
+     })
     }
     if(window.addEventListener){
         window.addEventListener('load', $scope.logincontrol())

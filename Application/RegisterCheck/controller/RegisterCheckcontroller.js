@@ -48,7 +48,9 @@ aplication.controller("registercheckctrl", function($scope, $location) {
             setdepartment:[{
                 blname:res[0].blname,
                 fid:res[0].fid,
-                bcount:(parseInt(res[0].bcount)+1).toString()
+                bcount:(parseInt(res[0].bcount)+1).toString(),
+                dpphoto:res[0].dpphoto
+
             }]
         }).then(function (res) {
             if(res=="Succes"){

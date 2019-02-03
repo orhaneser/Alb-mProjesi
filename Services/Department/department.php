@@ -19,6 +19,7 @@ $result=array();
                             "blname" => $depertmanetrows[$i]['blname'],
                             "fid" => $depertmanetrows[$i]['fid'],
                             "bcount" => $depertmanetrows[$i]['bcount'],
+                           "dpphoto"=>base64_encode($depertmanetrows[$i]['dpphoto'])
                         );
                     }
                 }
@@ -31,6 +32,8 @@ $result=array();
                     $fdata = array(
                         "blname"=>$data[$index]['blname'],
                         "bcount"=> $data[$index]['bcount'],
+                        "dpphoto"=> $data[$index]['dpphoto'],
+
                     );
                     $update = $db->update("department",$fdata,$_POST['where'],(isset($_POST['param']) ? $_POST['param'] : array()));
                 }

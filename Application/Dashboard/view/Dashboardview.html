@@ -19,110 +19,22 @@
     <div class="content-wrapper">
 
         <div class="page-header" style="padding: 20px 20px 0px;">
-            <h3 style="margin:0">DENEME FAKÜLTESİ <small>albümüne hoşgeldiniz</small></h3>
+            <h3 style="margin:0">  {{userdata.fname.toUpperCase()}} <small>albümüne hoşgeldiniz</small></h3>
         </div>
         <section class="content">
 
             <div class="row">
 
-                <div id="works"  class=" clearfix grid" style="padding-top: 0px;">
-                    <figure class="effect-oscar  wowload fadeInUp">
-                        <img src="images/portfolio/1.jpg" alt="img01"/>
+                <div id="works"  class=" clearfix grid" style="padding-top: 0px;" >
+                    <figure class="effect-oscar  wowload fadeInUp" ng-repeat="data in dphotos">
+                        <img style="width: 359.8px;height: 255px;" ng-src="{{'data:image/jpeg:image/png;base64,'+data.dpphoto}}" alt="{{data.blname.toUpperCase()}} Bölümü Albümü"/>
                         <figcaption>
-                            <h2>Nature</h2>
-                            <p>Lily likes to play with crayons and pencils<br>
-                                <a href="images/portfolio/1.jpg" title="1" data-gallery>View more</a></p>
-                        </figcaption>
-                    </figure>
-                    <figure class="effect-oscar  wowload fadeInUp">
-                        <img src="images/portfolio/2.jpg" alt="img01"/>
-                        <figcaption>
-                            <h2>Events</h2>
-                            <p>Lily likes to play with crayons and pencils<br>
-                                <a href="images/portfolio/2.jpg" title="1" data-gallery>View more</a></p>
-                        </figcaption>
-                    </figure>
-                    <figure class="effect-oscar  wowload fadeInUp">
-                        <img src="images/portfolio/3.jpg" alt="img01"/>
-                        <figcaption>
-                            <h2>music</h2>
-                            <p>Lily likes to play with crayons and pencils<br>
-                                <a href="images/portfolio/3.jpg" title="1" data-gallery>View more</a></p>
-                        </figcaption>
-                    </figure>
-                    <figure class="effect-oscar  wowload fadeInUp">
-                        <img src="images/portfolio/4.jpg" alt="img01"/>
-                        <figcaption>
-                            <h2>Vintage</h2>
-                            <p>Lily likes to play with crayons and pencils<br>
-                                <a href="images/portfolio/4.jpg" title="1" data-gallery>View more</a></p>
-                        </figcaption>
-                    </figure>
-                    <figure class="effect-oscar  wowload fadeInUp">
-                        <img src="images/portfolio/5.jpg" alt="img01"/>
-                        <figcaption>
-                            <h2>Typers</h2>
-                            <p>Lily likes to play with crayons and pencils<br>
-                                <a href="images/portfolio/5.jpg" title="1" data-gallery>View more</a></p>
+
+                            <p>{{data.blname.toUpperCase()}} Bölümü  Albümü <br>
+                                <a href="images/portfolio/1.jpg" title="1" data-gallery>Albümü Göster</a></p>
                         </figcaption>
                     </figure>
 
-                    <figure class="effect-oscar  wowload fadeInUp">
-                        <img src="images/portfolio/6.jpg" alt="img01"/>
-                        <figcaption>
-                            <h2>hotel</h2>
-                            <p>Lily likes to play with crayons and pencils<br>
-                                <a href="images/portfolio/6.jpg" title="1" data-gallery>View more</a></p>
-                        </figcaption>
-                    </figure>
-                    <figure class="effect-oscar  wowload fadeInUp">
-                        <img src="images/portfolio/7.jpg" alt="img01"/>
-                        <figcaption>
-                            <h2>Chinese</h2>
-                            <p>Lily likes to play with crayons and pencils<br>
-                                <a href="images/portfolio/7.jpg" title="1" data-gallery>View more</a></p>
-                        </figcaption>
-                    </figure>
-                    <figure class="effect-oscar  wowload fadeInUp">
-                        <img src="images/portfolio/8.jpg" alt="img01"/>
-                        <figcaption>
-                            <h2>Dicrap</h2>
-                            <p>Lily likes to play with crayons and pencils<br>
-                                <a href="images/portfolio/8.jpg" title="1" data-gallery>View more</a></p>
-                        </figcaption>
-                    </figure>
-                    <figure class="effect-oscar  wowload fadeInUp">
-                        <img src="images/portfolio/9.jpg" alt="img01"/>
-                        <figcaption>
-                            <h2>Coffee</h2>
-                            <p>Lily likes to play with crayons and pencils<br>
-                                <a href="images/portfolio/9.jpg" title="1" data-gallery>View more</a></p>
-                        </figcaption>
-                    </figure>
-                    <figure class="effect-oscar  wowload fadeInUp">
-                        <img src="images/portfolio/10.jpg" alt="img01"/>
-                        <figcaption>
-                            <h2>cameras</h2>
-                            <p>Lily likes to play with crayons and pencils<br>
-                                <a href="images/portfolio/10.jpg" title="1" data-gallery>View more</a></p>
-                        </figcaption>
-                    </figure>
-                    <figure class="effect-oscar  wowload fadeInUp">
-                        <img src="images/portfolio/11.jpg" alt="img01"/>
-                        <figcaption>
-                            <h2>design</h2>
-                            <p>Lily likes to play with crayons and pencils<br>
-                                <a href="images/portfolio/11.jpg" title="1" data-gallery>View more</a></p>
-                        </figcaption>
-                    </figure>
-                    <figure class="effect-oscar  wowload fadeInUp">
-                        <img src="images/portfolio/12.jpg" alt="img01"/>
-                        <figcaption>
-                            <h2>studio</h2>
-                            <p>Lily likes to play with crayons and pencils<br>
-                                <a href="images/portfolio/12.jpg" title="1" data-gallery>View more</a></p>
-                        </figcaption>
-                    </figure>
 
 
 
