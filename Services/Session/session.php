@@ -18,8 +18,7 @@ switch ($MN) {
         $time=$_SERVER['REQUEST_TIME'];
         $timeout_duration=6000;
         if($_SESSION["USER"]&&(time()-$_SESSION["USER"][0]["LoginTime"]>$timeout_duration)) {
-            session_unset();
-            session_destroy();
+            unset($_SESSION["USER"]);
             $result = array("status" => "204");
         }else{
             $result = array("status" => "200");
@@ -27,5 +26,8 @@ switch ($MN) {
         echo  json_encode($result);
         break;
     case "del":
+        unset($_SESSION["USER"]);
+        $result = array("status" => "204");
+        echo  json_encode($result);
         break;
 };

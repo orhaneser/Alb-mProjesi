@@ -21,7 +21,18 @@ var LoginControl={
         return deferred;
     },
     delSession:function(){
-
+        var deferred = new Promise(function (resolve, reject) {
+            Provider.AjaxPOST("Session/session.php",{MN:"del"}).then(function (res) {
+                if(res=="204"){
+                    localStorage.clear();
+                    sessionStorage.clear();
+                    resolve(true)
+                }else{
+                    resolve(false);
+                }
+            })
+        })
+        return deferred
     },
     outLogin: function () {
         localStorage.clear();

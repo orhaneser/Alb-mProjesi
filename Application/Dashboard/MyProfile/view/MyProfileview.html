@@ -1,0 +1,65 @@
+
+
+
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Albüm Projesi</title>
+    </head>
+    <body class="skin-blue" onload="test()">
+    <div ng-controller="myprofilectrl" ng-init="logincontrol()">
+        <div class="wrapper">
+            <!-- headernavbar -->
+            <div ng-include="'Application/Dashboard/header/dashboardheadernav.html'"></div>
+
+            <!--sol bar-->
+            <div ng-include="'Application/Dashboard/header/dashboardheaderview.html'"></div>
+            <div class="content-wrapper">
+
+                <section class="content">
+
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm-2 col-md-2">
+                                    <img src="http://thetransformedmale.files.wordpress.com/2011/06/bruce-wayne-armani.jpg"
+                                         alt="" class="img-rounded img-responsive" />
+                                </div>
+                                <div class="col-sm-4 col-md-4">
+                                    <blockquote>
+                                        <p>{{userdata.usname.toUpperCase()}} {{userdata.uslname.toUpperCase()}}</p> <small><cite title="Source Title">{{userdata.cname.toUpperCase()}} <i class="fa fa-map-marker" aria-hidden="true"></i></cite></small>
+                                    </blockquote>
+                                    <p> <i class="fa fa-envelope" aria-hidden="true"></i>{{userdata.ulgnname}}
+                                        <br
+                                        /> <i class="fa fa-asterisk" aria-hidden="true"></i>{{userdata.fname}} {{userdata.blname.toUpperCase()}}
+                                        <br /> <i class="fa fa-mobile" aria-hidden="true"></i>{{userdata.phone}}
+                                        <br /> <i class="fa fa-calendar-check-o" aria-hidden="true"></i>{{userdata.uyear}}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                </section>
+            </div>
+            <section id="footer">
+                <div class="container">
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
+                        <p>Bu Proje Yasin Dalkılıç,Orhan Eser ve Samet Öz Tarafından AngularJs Kullanılarak Geliştirilmiştir.</p>
+                        <p class="h6">&copy Tüm  Hakları Saklıdır<a class="text-green ml-2" ></a></p>
+                    </div>
+                    </hr>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+    </body>
+    </html>
+
+
+
+
+
+

@@ -3,9 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <title>Albüm Projesi</title>
-    <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
-    <link href="http://code.ionicframework.com/ionicons/2.0.0/css/ionicons.min.css" rel="stylesheet" type="text/css" />
-
 </head>
 <body class="skin-blue" onload="test()">
 <div ng-controller="dashboardctrl"  ng-init="logincontrol()">
@@ -15,45 +12,35 @@
 
  <!--sol bar-->
     <div ng-include="'Application/Dashboard/header/dashboardheaderview.html'"></div>
-
     <div class="content-wrapper">
-
         <div class="page-header" style="padding: 20px 20px 0px;">
             <h3 style="margin:0">  {{userdata.fname.toUpperCase()}} <small>albümüne hoşgeldiniz</small></h3>
         </div>
         <section class="content">
-
             <div class="row">
-
                 <div id="works"  class=" clearfix grid" style="padding-top: 0px;" >
                     <figure class="effect-oscar  wowload fadeInUp" ng-repeat="data in dphotos">
                         <img style="width: 359.8px;height: 255px;" ng-src="{{'data:image/jpeg:image/png;base64,'+data.dpphoto}}" alt="{{data.blname.toUpperCase()}} Bölümü Albümü"/>
                         <figcaption>
-
                             <p>{{data.blname.toUpperCase()}} Bölümü  Albümü <br>
                                 <a href="images/portfolio/1.jpg" title="1" data-gallery>Albümü Göster</a></p>
                         </figcaption>
                     </figure>
-
-
-
-
                 </div>
-
-
-
             </div>
-
-
-
         </section>
     </div>
-    <!--
-    <footer class="main-footer">
-        <div class="pull-right hidden-xs">
-            <b>Yasin Dalkılıç,Samet Öz,Orhan Eser</b>
-        </div>
-    </footer>-->
+    <section id="footer">
+        <div class="container">
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
+                    <p>Bu Proje Yasin Dalkılıç,Orhan Eser ve Samet Öz Tarafından AngularJs Kullanılarak Geliştirilmiştir.</p>
+                    <p class="h6">&copy Tüm  Hakları Saklıdır<a class="text-green ml-2" ></a></p>
+                </div>
+                </hr>
+            </div>
+    </section>
 </div>
 </div>
 </body>

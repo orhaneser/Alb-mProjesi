@@ -8,7 +8,6 @@ $scope.logincontrol=()=>{
     })
 }
 $scope.getdata=()=>{
-
     $scope.$apply(()=>{
         $scope.userdata = JSON.parse(Base64.decode(localStorage.getItem("UA")))[0];
         $scope.getUserDepartment();
@@ -19,7 +18,6 @@ $scope.getdata=()=>{
          $scope.$apply(()=>{
              $scope.dphotos=res;
          })
-         console.log($scope.dphotos);
      })
     }
     if(window.addEventListener){

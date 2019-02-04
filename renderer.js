@@ -13,14 +13,29 @@ aplication.config(function ($routeProvider) {
         }).when("/Dashboard",{
         templateUrl: "./Application/Dashboard/view/Dashboardview.html",
         controller:"dashboardctrl"
-    })
-      .otherwise({
+        }).when("/Profile",{
+        templateUrl:"./Application/Dashboard/MyProfile/view/MyProfileview.html",
+        controller:"myprofilectrl"
+
+    }).otherwise({
           templateUrl: "./Application/404/view/404.html",
           controller:"notctrl"
         });
 });
 
-aplication.controller("mainctrl", function ($scope) {
-    $scope.test="Merhaba";
+aplication.controller("mainctrl", function ($scope,$location,$interval) {
+   $scope.onCloseSession=()=>{
+    LoginControl.delSession().then(()=>{
+        $location.path('/');
+        window.location.hash=""
+    });
+   }
+   $scope.SessinInterval=()=>{
+       $interval(()=>{
+            //session kontrol edilecek
+       }, 30 * 60 * 1000);
+   }
+
+
   });
   

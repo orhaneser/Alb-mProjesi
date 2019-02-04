@@ -2,12 +2,15 @@
         <nav class="navbar navbar-static-top" role="navigation">
             <div class="navbar-custom-menu">
                 <ul class="nav navbar-nav">
-                    <li class="dropdown messages-menu">
+
+
+
                     <li class="dropdown user user-menu">
                         <a  class="dropdown-toggle" data-toggle="dropdown">
-                            <img src="http://localhost/electrotest/Application/resources/dist/img/avatar04.png" style="margin-top:10px;" class="user-image" alt="User Image"/>
-                            <span class="hidden-xs" >{{userdata.usname.toUpperCase()}}  {{userdata.uslname.toUpperCase()}}</span>
+                            <img src="http://localhost/electrotest/Application/resources/img/shutdown.png" style="margin-top:15px;" class="user-image" alt="User Image"/>
+                            <button ng-click="onCloseSession()"   type="button" style="background-color: transparent;padding:0" class="btn btn-light">Oturumu Kapat</button>
                         </a>
+
                         <ul class="dropdown-menu">
                             <li class="user-header">
                                 <img src="http://localhost/electrotest/Application/resources/dist/img/avatar04.png" class="img-circle" alt="User Image" />
