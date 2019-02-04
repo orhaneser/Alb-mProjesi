@@ -16,8 +16,11 @@ aplication.config(function ($routeProvider) {
         }).when("/Profile",{
         templateUrl:"./Application/Dashboard/MyProfile/view/MyProfileview.html",
         controller:"myprofilectrl"
-
-    }).otherwise({
+    }).when("/SharePhoto",{
+        templateUrl:"./Application/Dashboard/SharePhoto/view/SharedPhotoview.html",
+        controller:"sharedphotoctrl"
+    })
+        .otherwise({
           templateUrl: "./Application/404/view/404.html",
           controller:"notctrl"
         });

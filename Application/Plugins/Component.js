@@ -7,6 +7,7 @@ const Component={
         return re.test(email);
     },
     RequestParse:function(value){
+        /*
             var dizi = [];
             var param = value.split('&');
             param.forEach(function(row, index) {
@@ -52,7 +53,7 @@ const Component={
                 }
 
             })
-            return dizi;
+            return dizi;*/
     },
     readFileToBase64: function (file, callback) {
         return new Promise(function(resolve, reject) {
