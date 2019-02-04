@@ -20,6 +20,7 @@ $scope.getdata=()=>{
          })
      })
     }
+
     if(window.addEventListener){
         window.addEventListener('load', $scope.logincontrol())
     }
