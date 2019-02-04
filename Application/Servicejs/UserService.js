@@ -17,6 +17,14 @@ var  UserService= {
         })
         return deferred;
     },
+    getLayout:function(json){
+        var deferred = new Promise(function (resolve, reject) {
+            Provider.AjaxPOST("Layouts/layouts.php", json).then(function (res) {
+                resolve(res);
+            })
+        })
+        return deferred;
+    },
     getUser:function (json) {
         var deferred = new Promise(function (resolve, reject) {
             Provider.AjaxPOST(userservice, json).then(function (res) {

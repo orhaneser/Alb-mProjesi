@@ -19,6 +19,9 @@ aplication.config(function ($routeProvider) {
     }).when("/SharePhoto",{
         templateUrl:"./Application/Dashboard/SharePhoto/view/SharedPhotoview.html",
         controller:"sharedphotoctrl"
+    }).when("/MyPhotos",{
+        templateUrl:"./Application/Dashboard/MyPhotos/view/MyPhotosview.html",
+        controller:"myphotosctrl"
     })
         .otherwise({
           templateUrl: "./Application/404/view/404.html",

@@ -52,7 +52,7 @@ aplication.controller("registerctrl", function($scope, $location,$http) {
   }
   $scope.getdepartmant=(faculty)=>{
       $scope.deparmentlist=[];
-  RegisterService.getdepartmant({MN: "get", where: "fid=?", param: [faculty.fid]}).then(function (res) {
+      RegisterService.getdepartmant({MN: "get", where: "fid=?", param: [faculty.fid]}).then(function (res) {
         if(res!="None"){
           $scope.$apply(() => {
             res.forEach(element => {
