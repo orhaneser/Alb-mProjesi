@@ -24,12 +24,16 @@
                             <div class="row">
                                 <div class="col-sm-2 col-md-2">
 
-                                        <img  src="http://thetransformedmale.files.wordpress.com/2011/06/bruce-wayne-armani.jpg"
+                                        <img   ng-src="data:image/png;base64,{{userdata.uimg}}"
                                               alt="" class="img-rounded img-responsive" />
 
 
+                                        <p class="label-default">Resmi Değiştir</p>
+                                    <input type="file" file-input="files"  class="form-control" >
+                                    <button class="btn-warning" ng-click="setUserdata()">Yükle</button>
+
                                 </div>
-                                <div class="col-sm-4 col-md-4">
+                                <div class="col-sm-4 col-md-4" style="padding-left: 80px;"
                                     <blockquote>
                                         <p>{{userdata.usname.toUpperCase()}} {{userdata.uslname.toUpperCase()}}</p> <small><cite title="Source Title">{{userdata.cname.toUpperCase()}} <i class="fa fa-map-marker" aria-hidden="true"></i></cite></small>
                                     </blockquote>

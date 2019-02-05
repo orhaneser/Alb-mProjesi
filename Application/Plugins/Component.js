@@ -55,7 +55,22 @@ const Component={
             })
             return dizi;*/
     },
-    readFileToBase64: function (file, callback) {
+    /*
+    readbase64file:function(file){
+        var reader = new FileReader();
+        var dt = "";
+        var deferred = new Promise(function (resolve, reject) {
+            if (typeof (FileReader) != "undefined") {
+                reader.onload = function (evn) {
+                    dt = evn.target.result;
+                    resolve(dt)
+                }
+                reader.readAsDataURL(param);
+            }
+        })
+        return deferred;
+    },*/
+    readFileToBase64: function (file) {
         return new Promise(function(resolve, reject) {
             var reader = new FileReader();
             reader.onload = function (e) {

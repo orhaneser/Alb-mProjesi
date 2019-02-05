@@ -15,7 +15,6 @@ $scope.getdata=()=>{
     })
     }
     $scope.getLayout=()=>{
-    debugger
         if (localStorage.getItem("layouts") == null || localStorage.getItem("layouts") == "") {
             UserService.getLayout({MN:"get"}).then(function (res) {
                 $scope.$apply(()=>{

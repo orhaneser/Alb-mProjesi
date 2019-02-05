@@ -11,11 +11,6 @@ aplication.directive("fileInput",function($parse){ //elementlerin davranışlar�
                 const nokta=name.substr(name.indexOf(".")+1);
                 const sonuc=uzantilar.indexOf(nokta);
                 const sonuc2=turler.indexOf(type);
-                console.log(sonuc);
-                console.log(size);
-                console.log(type);
-                console.log(files[0].name);
-                console.log(files[0].name);
                 if(size>1024*1024*5)
                 {
                     Component.showmessage("Uyarı","Fotoğraf Boyutu 5M dan daha büyük olamaz.")
@@ -33,12 +28,15 @@ aplication.directive("fileInput",function($parse){ //elementlerin davranışlar�
                 }
                 else
                 {
-                    console.log("ok")
                     element.css({'color':'green'})
-                    const file= $parse(attrs.fileInput).assign($scope,element[0].files);
-                    $scope.$apply();
-                    var result= Component.readFileToBase64(file);
-                    console.log(result);
+                    var file= $parse(attrs.fileInput).assign($scope,element[0].files);
+                    $scope.$apply(function () {
+                        Component.readFileToBase64(file[0]).then(function (res) {
+                            $scope.file=res;
+                        });
+                    });
+
+
                 }
             });
         }
@@ -46,6 +44,7 @@ aplication.directive("fileInput",function($parse){ //elementlerin davranışlar�
 });
 aplication.controller("sharedphotoctrl",function ($scope,$location) {
     $scope.test=()=>{
+        console.log($scope.file.base64);
        console.log("sadasd");
    }
 });

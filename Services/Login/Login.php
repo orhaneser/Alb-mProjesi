@@ -15,7 +15,7 @@ $result=array();
 
 switch ($MN){
     case "get":
-        $userrows=$db->getrows("SELECT * FROM user u INNER JOIN faculty f on u.fid=f.fid INNER JOIN department d ON u.did=d.blid INNER JOIN city c ON u.city=c.cid INNER JOIN authority a ON u.uauth=a.aid INNER JOIN mail m ON u.usid=m.usid INNER JOIN phone p ON u.usid=p.usid WHERE ulgnname=?",array($_POST['param'][0]['uname']));
+        $userrows=$db->getrows("SELECT * FROM user u INNER JOIN faculty f on u.fid=f.fid INNER JOIN department d ON u.did=d.blid INNER JOIN city c ON u.city=c.cid INNER JOIN authority a ON u.uauth=a.aid INNER JOIN mail m ON u.usid=m.usid INNER JOIN phone p ON u.usid=p.usid INNER  JOIN userprofileimg n ON u.usid=n.usid WHERE ulgnname=?",array($_POST['param'][0]['uname']));
         if (count($userrows) == 0) {
             $result = array("status" => "None");
         }else{
@@ -43,6 +43,8 @@ switch ($MN){
                         "ulgnname" => $userrows[$i]["ulgnname"],
                         "mail" => $userrows[$i]["mail"],
                         "phone" => $userrows[$i]["phone"],
+                        "uimg"=>base64_encode($userrows[$i]['usprofimg']),
+                        "uspimgid"=>$userrows[$i]['uspimgid'],
                         "LoginTime" => time());
                 }
                 $_SESSION["USER"] =  $result;
