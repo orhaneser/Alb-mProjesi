@@ -28,10 +28,11 @@ $result=array();
             break;
         case "add":
             $profileimg=$_POST['profileimg'];
+            $usid=$profileimg[0]['usid'];
             $tfolder = base64_decode($profileimg[0]['usprofimg']);
             for ($i = 0; $i < count($_POST['profileimg']); $i++) {
                 $data = array(
-                    "usid" => $profileimg[$i]['usid'],
+                    "usid" =>$usid,
                     "usprofimg" => $tfolder,
                 );
                 if(null !==$db->beginTransaction()){

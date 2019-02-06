@@ -1,9 +1,11 @@
 aplication.controller("myprofilectrl", function($scope, $location) {
     $scope.logincontrol=()=>{
+
         LoginControl.onLogin().then(function (res) {
             if(res!=false){
                 $scope.getdata();
                 $scope.getLayout();
+                console.log($scope.userdata);
             }else{
             }
         })
@@ -30,18 +32,23 @@ aplication.controller("myprofilectrl", function($scope, $location) {
             "usid":$scope.userdata.usid,
             "usprofimg" :$scope.file.base64,
         }]
-        PluginService.pluginService("UserProfileİmg/userprofileimg.php",{MN:"add",profileimg:updatedata}).then((res)=>{
-            if(res){
+        debugger
             PluginService.pluginService("UserProfileİmg/userprofileimg.php",{MN:"del",where:"uspimgid=?",param:[$scope.userdata.uspimgid]}).then((res)=>{
-            UserService.getUser({}).then((res)=>{
-                $scope.$apply(()=>{
-                    localStorage.setItem("UA", Base64.encode(JSON.stringify(res)));
-                    $scope.userdata = res;
-                })
+           debugger
+                PluginService.pluginService("UserProfileİmg/userprofileimg.php",{MN:"add",profileimg:updatedata}).then((res)=>{
+                    if(res) {
+                        UserService.getUser({MN:"get",param:[$scope.userdata.ulgnname]}).then((res)=>{
+                            $scope.$apply(()=>{
+                                localStorage.setItem("UA",Base64.encode(JSON.stringify(res)));
+                                $scope.userdata.uimg=res[0].uimg;
+                                $scope.userdata.uspimgid=res[0].uspimgid;
+                            })
+                        })
+                    }
+
             })
             })
-            }
-        })
+
     }
     $scope.getUserDepartment=()=>{
         departmentService.getdepartment({MN:"get", where: "fid=?", param: [$scope.userdata.fid]}).then(function (res) {
