@@ -1,15 +1,25 @@
-
-
-
-
     <!DOCTYPE html>
     <html>
     <head>
         <meta charset="UTF-8">
         <title>Albüm Projesi</title>
+        <style>
+        .btntrans{
+            background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+        }
+        </style>
     </head>
-    <body class="skin-blue" onload="test()">
-    <div ng-controller="myprofilectrl" ng-init="logincontrol()">
+    <body class="skin-blue" >
+    <div ng-controller="myprofilectrl" >
+
+
+
+        <!------------->
         <div class="wrapper">
             <!-- headernavbar -->
             <div ng-include="'Application/Dashboard/header/dashboardheadernav.html'"></div>
@@ -23,17 +33,14 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col-sm-2 col-md-2">
-
                                         <img ng-model="userdata"   ng-src="data:image/png;base64,{{userdata.uimg}}"
                                               alt="" class="img-rounded img-responsive" />
-
-
-                                        <p class="label-default">Resmi Değiştir</p>
+                                        <p class="label-default" style="margin-top:10px; padding:0;">Resmi Değiştir</p>
                                     <input type="file" file-input="files"  class="form-control" >
                                     <button class="btn-warning" ng-click="setUserdata()">Yükle</button>
-
                                 </div>
-                                <div class="col-sm-4 col-md-4" style="padding-left: 80px;"
+
+                                <div class="col-sm-4 col-md-4" style="padding-left: 80px;">
                                     <blockquote>
                                         <p>{{userdata.usname.toUpperCase()}} {{userdata.uslname.toUpperCase()}}</p> <small><cite title="Source Title">{{userdata.cname.toUpperCase()}} <i class="fa fa-map-marker" aria-hidden="true"></i></cite></small>
                                     </blockquote>
@@ -44,13 +51,16 @@
                                         <br /> <i class="fa fa-calendar-check-o" aria-hidden="true"></i>{{userdata.uyear}}
                                     </p>
                                 </div>
+                                <div class="col-sm-4 col-md-4" style="padding-left: 300px;">
+                                    <button  class="btntrans" ng-click="openpass()"> <i class="fas fa-key"></i>Parola  Değiştir</button>
+                                        <button  class="btntrans" ng-click="openuseredit()"> <i class="fas fa-user-edit"></i>Düzenle</button>
+                                   
+                                    </div>
                             </div>
                         </div>
                 </section>
             </div>
             <section id="footer">
-                <div class="container">
-                </div>
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
                         <p>Bu Proje Yasin Dalkılıç,Orhan Eser ve Samet Öz Tarafından AngularJs Kullanılarak Geliştirilmiştir.</p>
@@ -63,6 +73,9 @@
     </div>
 </div>
     </body>
+    <div class="preloader" style="display: none;">
+        <div class="loader"></div>
+    </div>
     </html>
 
 

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Albüm Projesi</title>
+    <style>
+        .btntrans{
+            background-color: Transparent;
+            background-repeat:no-repeat;
+            border: none;
+            cursor:pointer;
+            overflow: hidden;
+            outline:none;
+        }
+    </style>
+</head>
+<body class="skin-blue" >
+<div ng-controller="setpassctrl" >
+
+    <!------------->
+    <div class="wrapper">
+        <!-- headernavbar -->
+        <div ng-include="'Application/Dashboard/header/dashboardheadernav.html'"></div>
+
+        <!--sol bar-->
+        <div ng-include="'Application/Dashboard/header/dashboardheaderview.html'"></div>
+        <div class="content-wrapper">
+
+            <section class="content">
+
+                <div class="container">
+                    <div class="row">
+                        <form>
+                            <div class="form-group">
+                                <label>Yeni Parola</label>
+                                <input type="password" class="form-control"  value="" >
+                                <button>asdsadsa</button>
+                                <button>Parola Öner</button>
+                                <p></p>
+                            </div>
+                            <div class="form-group">
+                                <label >Yeni Parola Tekrarı</label>
+                                <input type="password"  class="form-control" value="" >
+                            </div>
+                            <button type="submit" ng-click="setUserbasic()" class="btn btn-primary">Güncelle</button>
+                        </form>
+
+                    </div>
+                </div>
+            </section>
+        </div>
+        <section id="footer">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
+                    <p>Bu Proje Yasin Dalkılıç,Orhan Eser ve Samet Öz Tarafından AngularJs Kullanılarak Geliştirilmiştir.</p>
+                    <p class="h6">&copy Tüm  Hakları Saklıdır<a class="text-green ml-2" ></a></p>
+                </div>
+                </hr>
+            </div>
+        </section>
+    </div>
+</div>
+</div>
+</body>
+<div class="preloader" style="display: none;">
+    <div class="loader"></div>
+</div>
+</html>
+
+
+
+
+
+

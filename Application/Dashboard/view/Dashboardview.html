@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <title>Albüm Projesi</title>
 </head>
-<body class="skin-blue" onload="test()">
-<div ng-controller="dashboardctrl"  ng-init="logincontrol()">
+<body class="skin-blue" >
+<div ng-controller="dashboardctrl" >
 <div class="wrapper">
 <!-- headernavbar -->
 <div ng-include="'Application/Dashboard/header/dashboardheadernav.html'"></div>
@@ -43,7 +43,11 @@
     </section>
 </div>
 </div>
+<div class="preloader" style="display: none;">
+    <div class="loader"></div>
+</div>
 </body>
+
 </html>
 
 

@@ -22,6 +22,12 @@ aplication.config(function ($routeProvider) {
     }).when("/MyPhotos",{
         templateUrl:"./Application/Dashboard/MyPhotos/view/MyPhotosview.html",
         controller:"myphotosctrl"
+    }).when("/SetUser",{
+        templateUrl:"./Application/Dashboard/SetUser/view/setuserview.html",
+        controller:"setuserctrl"
+    }).when("/SetPass",{
+        templateUrl:"./Application/Dashboard/SetPass/view/setpassview.html",
+        controller:"setpassctrl"
     })
         .otherwise({
           templateUrl: "./Application/404/view/404.html",

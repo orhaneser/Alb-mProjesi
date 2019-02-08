@@ -88,7 +88,6 @@ aplication.controller("registerctrl", function($scope, $location,$http) {
           if(res=="Succes"){
             RegisterService.getRegister({ MN:"get",where:"umail=?",param:[$scope.registerdata.email]}).then(function (res) {
               if(typeof res =="object"){
-
                 var host="http://localhost/electrotest/#!/RegisterCheck?"
                 var msgarr=["<html><body>","<b>Kayıt oldugunuz için teşekkürler</b>","<br>","<b>buraya tıklayarak kaydınızı aktif edebilirsiniz</b>","<br>",host+res[0].rcode,"<hr>","<br>","<b>Tüm Haklar Gizlidir.</b>","</body></html>"]
                 var msgg=msgarr.join("");

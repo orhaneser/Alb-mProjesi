@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Albüm Projesi</title>
+    <style>
+        .btntrans{
+            background-color: Transparent;
+            background-repeat:no-repeat;
+            border: none;
+            cursor:pointer;
+            overflow: hidden;
+            outline:none;
+        }
+    </style>
+</head>
+<body class="skin-blue" >
+<div ng-controller="setuserctrl" >
+
+
+
+    <!------------->
+    <div class="wrapper">
+        <!-- headernavbar -->
+        <div ng-include="'Application/Dashboard/header/dashboardheadernav.html'"></div>
+
+        <!--sol bar-->
+        <div ng-include="'Application/Dashboard/header/dashboardheaderview.html'"></div>
+        <div class="content-wrapper">
+
+            <section class="content">
+
+                <div class="container">
+                    <div class="row">
+                        <form>
+                            <div class="form-group">
+                                <label for="exampleFormControlInput1">Email</label>
+                                <input type="email" class="form-control" id="exampleFormControlInput1" value="{{userdata.ulgnname}}" placeholder="ad@example.com">
+                            </div>
+                            <div class="form-group">
+                                <label>Şehir</label>
+                                <select ng-model="selectedOption" class="form-control selectpicker"
+                                        ng-options="x.cid as x.cname for x in citylist"
+                                     >
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label >Telefon</label>
+                                <input type="tel" onkeypress='return event.charCode >= 48 && event.charCode <= 57' class="form-control" value="{{userdata.phone}}"  placeholder="05555555555" maxlength="11">
+                            </div>
+                           <div class="form-group">
+                            <label >Fakülte</label>
+                               <select ng-model="selectedFOption"  ng-change="getUserDepartment(selectedFOption)"  class="form-control selectpicker"
+                                       ng-options="x.fid as x.fname for x in facultylist"
+                               >
+                               </select>
+                        </div>
+                            <div class="form-group">
+                                <label >Bölüm</label>
+                                <select ng-model="selectedDOption" class="form-control selectpicker"
+                                        ng-options="x.blid as x.blname for x in dphotos"
+                                >
+                                </select>
+                            </div>
+                            <button type="submit" ng-click="setUserbasic()" class="btn btn-primary">Güncelle</button>
+                        </form>
+
+                    </div>
+                </div>
+            </section>
+        </div>
+        <section id="footer">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
+                    <p>Bu Proje Yasin Dalkılıç,Orhan Eser ve Samet Öz Tarafından AngularJs Kullanılarak Geliştirilmiştir.</p>
+                    <p class="h6">&copy Tüm  Hakları Saklıdır<a class="text-green ml-2" ></a></p>
+                </div>
+                </hr>
+            </div>
+        </section>
+    </div>
+</div>
+</div>
+</body>
+<div class="preloader" style="display: none;">
+    <div class="loader"></div>
+</div>
+</html>
+
+
+
+
+
+
