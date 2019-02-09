@@ -17,10 +17,8 @@ aplication.controller("loginctrl", function($scope, $location) {
       Component.showmessage("Uyarı", "Kullanıcı Adı Veya Parola Geçersiz");
     }else{
       RegisterService.getblocklist({MN:"get",where: "email=?",param:[$scope.login.usname]}).then(function (res) {
-        debugger
         if(res=="None") {
           LoginControl.onLoginCheck($scope.login).then(function (res) {
-            debugger
             if(res!=false){
               window.open("/electrotest/#!/Dashboard","_self");
               window.location.reload();

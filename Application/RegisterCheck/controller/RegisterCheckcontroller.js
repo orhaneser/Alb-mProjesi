@@ -1,7 +1,6 @@
 aplication.controller("registercheckctrl", function($scope, $location) {
    $scope.checkRegister=()=>{
        var day =window.location.hash.split("?")[1].split("%20")[1][0]+window.location.hash.split("?")[1].split("%20")[1][1]
-
        if (parseInt(day) + 2 == parseInt(new Date().toLocaleDateString().split(".")[0])) {
             RegisterService.getRegister({MN: "get",where: "rcode=?",param: [window.location.hash.split("?")[1]]}).then(function (res) {
                 alertify
@@ -29,7 +28,24 @@ aplication.controller("registercheckctrl", function($scope, $location) {
 })
         return deferred;
     };
+   $scope.updateCityCount=(cid)=>{
+       debugger
+       PluginService.pluginService("City/city.php",{MN:"get",where:"cid=?",param:[cid]}).then(function (res) {
+           debugger
+           PluginService.pluginService("City/city.php",{MN:"set",where:"cid=?",param:[cid],
+               setcity:[{
+                   cname:res[0].cname,
+                   ccount:(parseInt(res[0].ccount)+1).toString()
+               }]
+           }).then(function (res) {
+
+           })
+       })
+       debugger
+
+   },
    $scope.updateFacultCount=(fid)=>{
+       debugger
        FacultyService.getfaculty({MN:"get",where:"fid=?",param:[fid]}).then(function (res) {
            FacultyService.updatefaculty({MN:"set",   where:"fid=?",param:[fid]
                ,setfaculty:[{
@@ -59,6 +75,8 @@ aplication.controller("registercheckctrl", function($scope, $location) {
     })
    }
     $scope.addUser=(param)=>{
+       debugger
+       const  code=param[0].rcode;
         const userjson = {
             usname: param[0].uname.toUpperCase(),
             uslname: param[0].ulastname.toUpperCase(),
@@ -78,6 +96,9 @@ aplication.controller("registercheckctrl", function($scope, $location) {
                       if(res==true){
                            $scope.updateFacultCount(param[0].ufaculty);
                            $scope.updateDepartmentCount(param[0].udepartment);
+                           $scope.updateCityCount(param[0].ucity);
+                           $scope.deltemp(code);
+
                        }
                    })
                }

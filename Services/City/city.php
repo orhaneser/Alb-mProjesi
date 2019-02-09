@@ -26,6 +26,26 @@ $result=array();
                     }
                 }
               echo  json_encode($result);
+                break;
+            case "set":{
+                $data=$_POST['setcity'];
+                for ($index = 0; $index < count($_POST['setcity']); $index++) {
+                    $cdata = array(
+                        "cname"=>$data[$index]['cname'],
+                        "ccount"=> $data[$index]['ccount'],
+                    );
+                    $update = $db->update("city",$cdata,$_POST['where'],(isset($_POST['param']) ? $_POST['param'] : array()));
+                }
+                if ($update) {
+                    $result = array("status" => "Succes");
+                } else {
+                    $result = array("status" => "None");
+                }
+                echo  json_encode($result);
+
+
+                break;
+            }
         }
 
 

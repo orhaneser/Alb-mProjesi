@@ -33,16 +33,17 @@
                         <form>
                             <div class="form-group">
                                 <label>Yeni Parola</label>
-                                <input type="password" class="form-control"  value="" >
-                                <button>asdsadsa</button>
-                                <button>Parola Öner</button>
-                                <p></p>
+                                <input type="password" class="form-control"  ng-model="pass.newpass" >
+                                {{passw}}
+                                <button ng-click="makePass()">Parola Öner</button>
+                        
+                                <button ng-show="val" ng-click="usePass()">Parolayı Kullan</button>
                             </div>
                             <div class="form-group">
                                 <label >Yeni Parola Tekrarı</label>
-                                <input type="password"  class="form-control" value="" >
+                                <input type="password"  class="form-control" ng-model="pass.newpasstry" >
                             </div>
-                            <button type="submit" ng-click="setUserbasic()" class="btn btn-primary">Güncelle</button>
+                            <button type="submit" ng-click="setuserpass()" class="btn btn-primary">Güncelle</button>
                         </form>
 
                     </div>

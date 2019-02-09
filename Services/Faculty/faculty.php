@@ -24,7 +24,6 @@ switch ($MN){
             for ($index = 0; $index < count($_POST['setfaculty']); $index++) {
                 $fdata = array(
                     "fname"=>$data[$index]['fname'],
-                    "statuscode"=>"200",
                     "fscount"=> $data[$index]['fscount'],
                 );
                 $update = $db->update("faculty",$fdata,$_POST['where'],(isset($_POST['param']) ? $_POST['param'] : array()));

@@ -62,13 +62,6 @@ aplication.controller("registerctrl", function($scope, $location,$http) {
         }
       })
   }
-  $scope.makeid= ()=> {
-    var text = "";
-    var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-    for (var i = 0; i < 5; i++)
-      text += possible.charAt(Math.floor(Math.random() * possible.length));
-    return text;
-  },
   $scope.addRegister=(name,lastname,phone,mail,faculty,department,pass,city,year)=>{
     $('.preloader').css('display',"block");
       RegisterService.addRegister({MN:"add",
@@ -80,7 +73,7 @@ aplication.controller("registerctrl", function($scope, $location,$http) {
         ufaculty:faculty,
         udepartment:department,
         upass:MD5(pass),
-        rcode:MD5($scope.makeid())+"+"+ new Date().toLocaleDateString().split(".")[0] + new Date().toLocaleDateString().split(".")[1] + new Date().toLocaleDateString().split(".")[2],
+        rcode:MD5(Component.makeRandomText())+"+"+ new Date().toLocaleDateString().split(".")[0] + new Date().toLocaleDateString().split(".")[1] + new Date().toLocaleDateString().split(".")[2],
         ucity:city,
         uyear:year
       }]
